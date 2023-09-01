@@ -65,12 +65,10 @@ MVP/CRUD RESTFUL ROUTES:
 
 
 BASIC ERD: 
-
-
+![image](https://github.com/jhsu79/chefskiss/assets/137831358/94ebebbf-7bc8-48d6-84dc-1066e367103e)
 
 STRETCH GOALS: 
-
-
+![image](https://github.com/jhsu79/chefskiss/assets/137831358/599b3c0c-67ea-42ac-b898-3f2da874ccba)
 
 User Story
 
@@ -94,7 +92,6 @@ See a summary of all posted reviews.
 
 
 Icebox Routes (Optional)
-
 
 
 
