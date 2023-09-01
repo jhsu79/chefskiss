@@ -18,12 +18,12 @@ Primary Model / Schema - Post
 | Property         | Datatype      |
 | -------------    | ------------- |
 | _id              | Objectid      |
-| Cuisine          | String        |
-| Name             | String        |
-| LocationID       | String        |
-| Phone No.        | String        |
-| Restaurant Link  | String        |
-| Associated Field | Ref: Comments |
+| cuisine          | String        |
+| name             | String        |
+| locationId       | String        |
+| phoneNumber      | String        |
+| restaurantLink   | String        |
+| associatedField  | Ref: Comments |
 
 Notes:
 Use the Search function to generate data from a 3rd Party API that can be added to populate values. 
@@ -38,30 +38,30 @@ Secondary Model / Schema - Impressions
 | favorite         | Boolean       |
 | requireRes       | Boolean       |
 | comments         | String        |
-| datePosted       | Ref: Date     |
+| datePosted       | Date          |
 
 Notes:
 User will be able to populate this schema using a form.  
 
 MVP/CRUD RESTFUL ROUTES:
 
-| Route Name    | Crud Ops      | URL endpoint     | Module Name   | Controller Action         | Notes                                                             |
-| ------------- | ------------- | -------------    | ------------- | -----------------         | -------------                                                     |
-| ROUTES FOR PRIMARY MODEL: RESTAURANTS                                                                                                                            |
-| POST          | Create        | /restaurants     | create        | .create()                 | Creates entry for restaurants/Add Button using pre-populated data |
-| GET           | Read          | /restaurants     | index         | .find()                   | Show a list of restaurants the user has saved                     |
-| GET           | Read          | /restaurants/:id | show          | .findById()               | Display all restaurants with impressions if they exist            |
-| DELETE        | Delete        | /restaurants/:id | delete        | .deleteOne()              | Delete restaurant                                                 |
+| Route Name    | Crud Ops      | URL endpoint   | Module Name   | Controller Action  | Notes                                                     |              
+| ------------- | ------------- | -------------  | ------------- | -----------------  | -------------                                             |
+| ROUTES FOR PRIMARY MODEL: RESTAURANTS                                                                                                                  |
+| POST          | Create        | /restaurants    | Create        | .create()          | Creates entry for restaurants/Add Button using pre-populated data |
+| GET           | Read          | /restaurants    | Index         | .find()            | Show a list of restaurants the user has saved                     |
+| GET           | Read          | /restaurants/:id| Show          | .findById()        | Display all restaurants with impressions if they exist            |
+| DELETE        | Delete        | /restaurants/:id | Delete        | .deleteOne()       | Delete restaurant                                                 |
 
 
 | Route Name    | Crud Ops      | URL endpoint                          | Module Name               | Controller Action           | Notes                                 |                         
 | ------------- | ------------- | -------------                         | -------------             | -----------------           | -------------                         |                      
 | ROUTES FOR SECONDARY MODEL: IMPRESSIONS                                                                                                                                 |
-| POST          | Create        | /restaurants/id/impressions           | create                    | .findByID() .push() .save() |                                       |
-| DELETE        | Delete        |  /restaurants/id/impressions/comments | delete                    | .deleteOne                  |                                       |
-| GET           | Read          | /restaurants/new                      | new                       |                             |  Display form for editing Impressions |
-| GET           | Read          | /restaurants/:id/edit                 | edit:editImpressions      |                             |  Form to edit restaurant Impressions  |
-| PUT           | Update        | /restaurants/:id//comments/:commentId | update: updateImpressions | .findById() .save()         |  Update Post                          |                           
+| POST          | Create        | /restaurants/:id/impressions           | Create                    | .findByID() .push() .save() |                                       |
+| DELETE        | Delete        |  /restaurants/:id/impressions/:impressionId | Delete                    | .deleteOne                  |                                       |
+| GET           | Read          | /restaurants/new                      | New                       |                             |  Display form for editing Impressions |
+| GET           | Read          | /restaurants/:id/edit                 | Edit:editImpressions      |                             |  Form to edit restaurant Impressions  |
+| PUT           | Update        | /restaurants/:id/impressions/:impressionId | Update: updateImpressions | .findById() .save()         |  Update Post                          |                           
 
 
 BASIC ERD: 
