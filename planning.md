@@ -15,7 +15,15 @@ Link to API: https://rapidapi.com/ptwebsolution/api/worldwide-restaurants/
 
 Primary Model / Schema - Post
 
-
+| Property         | Datatype      |
+| -------------    | ------------- |
+| _id              | Objectid      |
+| Cuisine          | String        |
+| Name             | String        |
+| LocationID       | String        |
+| Phone No.        | String        |
+| Restaurant Link  | String        |
+| Associated Field | Ref: Comments |
 
 Notes:
 Use the Search function to generate data from a 3rd Party API that can be added to populate values. 
