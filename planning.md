@@ -8,7 +8,12 @@ Link to Github Repo : https://github.com/jhsu79/chefskiss
 
 Link To Trello: https://trello.com/b/ryjCcTMz/the-chefs-kiss
 
-Link to wireframe(s): 
+Wireframes
+![image](https://github.com/jhsu79/chefskiss/assets/137417888/3e20b9ca-09f4-49f2-8f6d-dcd727f5a386)
+![image](https://github.com/jhsu79/chefskiss/assets/137417888/0e1a7b97-b4bd-4013-b799-3d2cf3af7ce5)
+![image](https://github.com/jhsu79/chefskiss/assets/137417888/3ca4a775-1ed0-4d26-bd0d-af7707a21acb)
+
+
 
 Link to API: https://rapidapi.com/ptwebsolution/api/worldwide-restaurants/
 
