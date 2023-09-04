@@ -1,5 +1,5 @@
 const { Restaurant } = require("../models")
-const { Impression } = rquire("../models")
+const { Impression } = require("../models")
 
 module.exports = {
   index,
