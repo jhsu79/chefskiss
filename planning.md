@@ -4,7 +4,7 @@ Project Summary:  A Restaurant Search App that allows you to search for a list o
 
 Team members: Joshua Hsu, James Redden 
 
-Link to Github Repo : 
+Link to Github Repo : https://github.com/jhsu79/chefskiss
 
 Link To Trello: https://trello.com/b/ryjCcTMz/the-chefs-kiss
 
