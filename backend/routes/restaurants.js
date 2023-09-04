@@ -1,10 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const restaurantsCtrl = require('../controllers/restaurants')
+const restaurantsCtrl = require('../controllers/restaurants');
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+// Restaurants CRUD routes
+router.get('/', restaurantsCtrl.index);
+router.post('/', restaurantsCtrl.create);
+router.get('/:id', restaurantsCtrl.show);
+router.put('/:id', restaurantsCtrl.update);
+router.delete('/:id', restaurantsCtrl.delete); 
+
 
 module.exports = router;

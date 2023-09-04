@@ -3,7 +3,7 @@ require('./config/database')
 
 const express = require('express');
 const path = require('path');
-const cookieParser = require('cookie-parser');
+const cookieParser = require('cookie-parser'); //Not sure if this is needed
 const cors = require('cors')
 const logger = require('morgan');
 
