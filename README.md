@@ -13,22 +13,22 @@ James Redden [GitHub](https://github.com/jaredden1) | [LinkedIn](https://www.lin
     
 ###How Do I Use Chef's Kiss? 
 1. Click on this link to acces the app: [A Chef's Kiss](https://link-url-here.org)
-2. Enter a type of cuisine you'd like to explore (required).  
-    i.e. Japanese, New American, Mexican, Indian. 
-2. Choose a location (required).
-3. Click Search. 
+2. Enter a type of cuisine you'd like to explore or a city or zipcode you'd like to explore.    
+    i.e. Japanese, New American, Mexican, Indian OR Portland, Maine or 04102. 
+3. Click Search. This will populate list of restaurants based on your search conditions. 
 4. Select a restaurant you'd like to save to 'Your Restaurants'. 
-5. On 'Your Restaurants page, you can view all the details about that restaurant. 
+5. On 'Your Restaurants page, you can view all the details about the restaurants you've saved. 
 6. On 'Your Restaurants' page, you can also add, edit or delete your impressions if you've been.     
-If you've been to the restaurant,
+    a. If you've been to the restaurant,
             1. Rank the ambience on a scale of 1 to 5
             2. Rank the cleanliness on a scale of 1 to 5
             3. Rank the service on a scale of 1 to 5
             4. What were your favorite dishes? 
             5. What made this experience memorable?  
             6. Would you go again? 
-    7. If you have not been, 
+    b. If you have not been, 
             a. When do you plan to go the restaurant? 
+                1. Enter the date and time. 
          
 ##Technologies Used:
     
