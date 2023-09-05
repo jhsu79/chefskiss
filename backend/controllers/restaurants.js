@@ -38,7 +38,7 @@ async function savedRest(req, res) {
     res
       .status(200)
       .json(
-        await Event.find({}).sort({ceatedAt: -1}));
+        await Event.find({}).sort({createdAt: -1}));
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
