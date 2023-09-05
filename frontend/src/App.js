@@ -6,7 +6,6 @@ import { RestaurantContext } from "./data/RestaurantContext";
 
 export default function App() {
   const { Provider: RestaurantData } = RestaurantContext;
-  // 3. initalize some global 'state' in APP
   const [state, setState] = useState({
     error: "",
   });
