@@ -6,7 +6,7 @@ const restaurantsCtrl = require('../controllers/restaurants');
 router.get('/', restaurantsCtrl.index);
 router.post('/', restaurantsCtrl.create);
 router.get('/:id', restaurantsCtrl.show);
-router.put('/:id', restaurantsCtrl.update);
+router.get('/savedRestaurants', restaurantsCtrl.savedRest)
 router.delete('/:id', restaurantsCtrl.delete); 
 
 

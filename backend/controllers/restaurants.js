@@ -5,7 +5,7 @@ module.exports = {
   index,
   create,
   show,
-  update,
+  savedRest, 
   delete: destroy,
 };
 
@@ -33,13 +33,12 @@ async function show(req, res) {
   }
 }
 
-async function update(req, res) {
+async function savedRest(req, res) {
   try {
     res
       .status(200)
       .json(
-        await Event.findByIdAndUpdate(req.params.id, req.body, { new: true })
-      );
+        await Event.find({}).sort({ceatedAt: -1}));
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
@@ -52,3 +51,5 @@ async function destroy(req, res) {
     res.status(400).json({ error: error.message });
   }
 }
+
+
