@@ -1,17 +1,18 @@
 import {useState, useEffect } from 'react'
+import RestaurantList from "./RestaurantList"
 import {getRestaurant} from '../../utilities/restaurant-service'
 import NewRestaurantSearch from './RestaurantSearch'
 
 export default function Restaurants(props) {
-    const[isLoading, setIsLoading] = useState(true)
-    const [restuarant, setRestaurant]= useState([])
+    // const[isLoading, setIsLoading] = useState(true)
+    const [restaurants, setRestaurants]= useState([])
 
     async function handleRequest(){
         const restaurantResponse = await getRestaurant()
 
         if(restaurantResponse.length) {
-            setRestaurant(restaurantResponse)
-            setIsLoading(false); 
+            setRestaurants(restaurantResponse)
+            // setIsLoading(false); 
         } else { 
             console.log(restaurantResponse)
         }
@@ -23,6 +24,7 @@ export default function Restaurants(props) {
 
     return (<div className='restaurants'>
     <NewRestaurantSearch updateRestaurant={handleRequest}/>
+    <RestaurantList restaurants={ restaurants }/>
                                                     </div>)
     // // isLoading ? 
     // (
