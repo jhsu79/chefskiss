@@ -4,6 +4,7 @@ const { Impression } = require("../models")
 module.exports = {
     create,
     delete: destroy, 
+    show,
     edit, 
     update,
 }
@@ -25,6 +26,19 @@ module.exports = {
   }
   
   async function update(req, res) {
+    try {
+      res
+        .status(200)
+        .json(
+          await Event.findByIdAndUpdate(req.params.id, req.body, { new: true })
+        );
+    } catch (error) {
+      res.status(400).json({ error: error.message });
+    }
+  }
+
+
+  async function edit(req, res) {
     try {
       res
         .status(200)
