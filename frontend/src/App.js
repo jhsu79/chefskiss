@@ -13,7 +13,7 @@ export default function App() {
   return (
     <div className="App">
       <RestaurantData value={state}>
-        <Header />
+        <Header /> 
         <Main />
       </RestaurantData>
     </div>
