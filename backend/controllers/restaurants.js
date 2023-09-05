@@ -11,6 +11,7 @@ module.exports = {
   showAPI,
   getCurrencies,  
   getLanguages,
+  getTypeahead,
 };
 
 async function index(req, res) {
@@ -87,12 +88,13 @@ async function searchAPI(req, res) {
 }
 
 async function showAPI(req, res) {
-  const { location_id, language = 'en_US', currency = 'USD' } = req.query;
+  const { location_id, typeahead = 'band', language = 'en_US', currency = 'USD' } = req.query;
 
   const encodedParams = new URLSearchParams();
   encodedParams.set('currency', currency);
   encodedParams.set('language', language);
   encodedParams.set('location_id', location_id);
+  encodedParams.set('q', typeahead);
 
   const options = {
       method: 'POST',
@@ -134,6 +136,24 @@ async function getLanguages(req, res) {
   const options = {
       method: 'GET',
       url: 'https://worldwide-restaurants.p.rapidapi.com/languages',
+      headers: {
+          'X-RapidAPI-Key': RAPIDAPI_KEY,  // Use the variable
+          'X-RapidAPI-Host': 'worldwide-restaurants.p.rapidapi.com'
+      }
+  };
+
+  try {
+      const response = await axios.request(options);
+      res.status(200).json(response.data);
+  } catch (error) {
+      res.status(400).json({ error: error.message });
+  }
+}
+
+async function getTypeahead(req, res) {
+  const options = {
+      method: 'POST',
+      url: 'https://worldwide-restaurants.p.rapidapi.com/typeahead',
       headers: {
           'X-RapidAPI-Key': RAPIDAPI_KEY,  // Use the variable
           'X-RapidAPI-Host': 'worldwide-restaurants.p.rapidapi.com'
