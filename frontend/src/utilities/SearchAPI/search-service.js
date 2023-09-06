@@ -1,7 +1,7 @@
 import * as searchAPI from './search-api'
 
 
-export async function getRestaurant(){
+export async function getSearchResult(){
     try {
         const data = await searchAPI.index()
         return data

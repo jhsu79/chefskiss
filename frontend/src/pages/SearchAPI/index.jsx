@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import SearchResultsList from "./SearchResultsList";
 import SearchAPIBar from "./SearchAPIBar";
-import { getSearchRestaurant } from "../../utilities/SearchAPI/search-service";
+import { getSearchResult } from "../../utilities/SearchAPI/search-service";
 
 export default function Search() {
   const [results, setResults] = useState([]);
 
   async function handleRequest() {
-    const searchResponse = await getSearchRestaurant();
+    const searchResponse = await getSearchResult();
 
     if (searchResponse.length) {
       setResults(searchResponse);
