@@ -10,11 +10,11 @@ export default function Nav(props) {
       <Link to="/">
         <img src={headerImage}></img>
       </Link>
-      <Link className="link" to="/savedRestaurants">
-        <div className="linktext">Your Restaurants</div>
+      <Link className="link" to="/search">
+        <div className="linktext">Search</div>
       </Link>
       <Link className="link" to="/about">
-        <div className="linktext">About</div>
+        <div className="linktext">About Us</div>
       </Link>
     </nav>
   );

@@ -1,6 +1,6 @@
 import {useState, useEffect } from 'react'
 import RestaurantList from "./RestaurantList"
-import {getRestaurant} from '../../utilities/restaurant-service'
+import {getRestaurant} from '../../utilities/restaurant/restaurant-service'
 import NewRestaurantSearch from './RestaurantSearch'
 
 export default function Restaurants(props) {
