@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema; 
 
-
+//restaurant Schema w/ parameters
 const restaurantSchema = new Schema(
   {
     impressions: [
@@ -11,10 +11,11 @@ const restaurantSchema = new Schema(
       },
     ],
     name: { type: String },
-    location: { type: String },
-    cuisine: { type: String },
-    phoneNumber: { type: String },
-    restaurantLink: { type: String },
+    display_address: { type: String },
+    categories: [{ type: String }],
+    display_phone: { type: String },
+    url: { type: String },
+    
   },
   {
     timestamps: true,

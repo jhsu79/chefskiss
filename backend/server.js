@@ -19,7 +19,7 @@ app.use(logger('dev'));
 
 app.use('/', indexRouter);
 app.use('/restaurants', restaurantsRouter);
-app.use('/searchAPI', searchAPIRouter);
+app.use('/search', searchAPIRouter);
 
 app.get('/', (req, res) => {
     res.send('hello world')

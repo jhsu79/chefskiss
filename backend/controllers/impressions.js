@@ -9,6 +9,7 @@ module.exports = {
   update,
 };
 
+//create functions for CRUD
 async function create(req, res) {
   try {
     res.status(201).json(await Event.create(req.body));
@@ -17,6 +18,7 @@ async function create(req, res) {
   }
 }
 
+//show function for CRUD
 async function show(req, res) {
   try {
     res.status(200).json(await Event.findById(req.params.id));
@@ -25,6 +27,7 @@ async function show(req, res) {
   }
 }
 
+//update function for CRUD
 async function update(req, res) {
   try {
     res
@@ -37,6 +40,7 @@ async function update(req, res) {
   }
 }
 
+//edit function for CRUD
 async function edit(req, res) {
   try {
     res
@@ -49,6 +53,7 @@ async function edit(req, res) {
   }
 }
 
+//delete function for CRUD
 async function destroy(req, res) {
   try {
     res.status(200).json(await Event.findByIdAndDelete(req.params.id));
