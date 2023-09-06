@@ -10,9 +10,6 @@ export async function getRestaurant(){
 
 export async function createRestaurant(newRestaurantData){
 
-    // extension: we might pass the data through a few helper functions for normalizing data
-    // after data parsing - provide data to create
-
     try {
         const data = await restaurantAPI.create(newRestaurantData)
         return data
