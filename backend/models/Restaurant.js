@@ -4,11 +4,17 @@ const Schema = mongoose.Schema;
 
 const restaurantSchema = new Schema(
   {
-    impressions: [
+    user: 
+      {
+        type: Schema.Types.ObjectId, 
+        ref: 'User', 
+      }
+    ,
+    impression: [
       {
         type: Schema.Types.ObjectId,
-        ref: "Impressions",
-      },
+        ref: "Impression",
+      }
     ],
     name: { type: String },
     location: { type: String },

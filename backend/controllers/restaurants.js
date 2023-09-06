@@ -16,7 +16,7 @@ module.exports = {
 
 async function index(req, res) {
   try {
-    res.status(200).json(await Event.find());
+    res.status(200).json(await Restaurant.find().where({ user_id: req.body.user_id}));
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
@@ -24,7 +24,7 @@ async function index(req, res) {
 
 async function create(req, res) {
   try {
-    res.status(201).json(await Event.create(req.body));
+    res.status(201).json(await Restaurant.create(req.body));
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
@@ -32,7 +32,7 @@ async function create(req, res) {
 
 async function show(req, res) {
   try {
-    res.status(200).json(await Event.findById(req.params.id));
+    res.status(200).json(await Restaurant.findById(req.params.id));
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
@@ -51,7 +51,7 @@ async function savedRest(req, res) {
 
 async function destroy(req, res) {
   try {
-    res.status(200).json(await Event.findByIdAndDelete(req.params.id));
+    res.status(200).json(await Restaurant.findByIdAndDelete(req.params.id));
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
