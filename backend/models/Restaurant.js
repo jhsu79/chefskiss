@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema; 
 
-
+//restaurant Schema w/ parameters
 const restaurantSchema = new Schema(
   {
     impressions: [

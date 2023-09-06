@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+//impression Schema w/ parameters
 const impressionSchema = new Schema(
   {
     parentId: {
