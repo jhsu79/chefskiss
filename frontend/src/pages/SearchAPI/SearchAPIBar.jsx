@@ -4,7 +4,7 @@ const initState = {
     location: "",
 }
 
-export default function SearchAPIBar({updateSearch}) {
+export default function SearchAPIBar({updateSearchResultsList}) {
     const [newSearch, setNewSearch] = useState(initState)
 
     async function handleSubmit(e){
