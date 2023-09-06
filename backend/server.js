@@ -7,6 +7,7 @@ const logger = require('morgan');
 
 const indexRouter = require('./routes/index');
 const restaurantsRouter = require('./routes/restaurants');
+const searchAPIRouter = require('./routes/searchAPI');
 
 const { PORT } = process.env
 const app = express();
@@ -18,6 +19,7 @@ app.use(logger('dev'));
 
 app.use('/', indexRouter);
 app.use('/restaurants', restaurantsRouter);
+app.use('/searchAPI', searchAPIRouter);
 
 app.get('/', (req, res) => {
     res.send('hello world')
