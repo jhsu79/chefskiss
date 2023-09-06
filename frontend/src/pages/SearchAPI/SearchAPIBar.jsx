@@ -4,14 +4,13 @@ const initState = {
     location: "",
 }
 
-export default function SearchAPIBar({updateSearchResultsList}) {
+export default function SearchAPIBar() {
     const [newSearch, setNewSearch] = useState(initState)
 
     async function handleSubmit(e){
         e.preventDefault() 
         console.log(newSearch)
         await createSearchResultsList(newSearch)
-        updateSearchResultsList()
         setNewSearch(initState)
 }
     function handleChange(e){
