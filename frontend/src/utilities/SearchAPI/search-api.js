@@ -1,7 +1,7 @@
-const BASE_URL = process.env.REACT_APP_BASE_URL 
-
+const API_BASE_URL = process.env.API_BASE_URL
+//GET Search Results
 export async function index() {
-    const res = await fetch (BASE_URL, {
+    const res = await fetch (API_BASE_URL, {
         method: "GET",
     })
     if (res.ok) {
@@ -11,6 +11,7 @@ export async function index() {
       }
     }
 
+    //POST Search to get the results.  
     export async function create(data) {
       const config = {
         method: "POST",
@@ -20,7 +21,7 @@ export async function index() {
         body: JSON.stringify(data),
       };
 
-      const res = await fetch(BASE_URL, config);
+      const res = await fetch(API_BASE_URL, config);
     
       console.log(res);
     

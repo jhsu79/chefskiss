@@ -1,5 +1,5 @@
 import * as restaurantAPI from './restaurant-api'
-
+//RETURN A LIST OF RESTAURANTS IN THE DB
 export async function getRestaurant(){
     try {
         const data = await restaurantAPI.index()
@@ -7,11 +7,8 @@ export async function getRestaurant(){
     } catch(err){
     return err}
 }
-
+//ADD A NEW RESTAURANT TO THE DB
 export async function createRestaurant(newRestaurantData){
-
-    // extension: we might pass the data through a few helper functions for normalizing data
-    // after data parsing - provide data to create
 
     try {
         const data = await restaurantAPI.create(newRestaurantData)

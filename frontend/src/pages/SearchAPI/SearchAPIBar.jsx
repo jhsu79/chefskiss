@@ -1,20 +1,16 @@
 import {useState} from "react"
-import "./RestaurantSearch.css"
-import {createRestaurant} from "../../utilities/restaurant-service"
+import {createSearchResultsList} from "../../utilities/SearchAPI/search-service"
 const initState = {
     location: "",
 }
 
-//What fields should we put into the init state on Line 4/9. What does the API Need? 
-
-export default function NewRestaurantSearch({updateRestaurant}) {
+export default function SearchAPIBar() {
     const [newSearch, setNewSearch] = useState(initState)
 
     async function handleSubmit(e){
         e.preventDefault() 
         console.log(newSearch)
-        await createRestaurant(newSearch)
-        updateRestaurant()
+        await createSearchResultsList(newSearch)
         setNewSearch(initState)
 }
     function handleChange(e){
