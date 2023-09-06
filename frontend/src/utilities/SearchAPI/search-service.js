@@ -1,6 +1,6 @@
 import * as searchAPI from './search-api'
 
-
+//Display Search Results 
 export async function getSearchResult(){
     try {
         const data = await searchAPI.index()
@@ -9,6 +9,9 @@ export async function getSearchResult(){
     return err}
 }
 
+
+
+//Build a list to display
 export async function createSearchResultsList(newRestaurantData){
 
     try {
@@ -18,6 +21,3 @@ export async function createSearchResultsList(newRestaurantData){
         return err
     }
 }
-
-    // extension: we might pass the data through a few helper functions for normalizing data
-    // after data parsing - provide data to create

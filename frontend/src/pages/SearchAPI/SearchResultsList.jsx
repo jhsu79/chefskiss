@@ -4,7 +4,7 @@ import {createRestaurant} from "../../utilities/restaurant/restaurant-service"
 
 
 export default function SearchResultsList({ results }) {
-    
+    // HERE's the submit function.... 
     // async function handleSubmit(e){
     //   e.preventDefault() 
     //   console.log(e.target.name)

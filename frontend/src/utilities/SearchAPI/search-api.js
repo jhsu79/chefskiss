@@ -1,5 +1,5 @@
-const API_URL = process.env.API_BASE_URL
-
+const API_BASE_URL = process.env.API_BASE_URL
+//GET Search Results
 export async function index() {
     const res = await fetch (API_BASE_URL, {
         method: "GET",
@@ -11,6 +11,7 @@ export async function index() {
       }
     }
 
+    //POST Search to get the results.  
     export async function create(data) {
       const config = {
         method: "POST",
