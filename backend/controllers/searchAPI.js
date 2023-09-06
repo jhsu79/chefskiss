@@ -5,6 +5,7 @@ module.exports = {
     searchYelp,
   };
 
+  //searchYelp function for API
   async function searchYelp(req, res) {
     const location = req.body.location;
 
