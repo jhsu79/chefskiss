@@ -7,7 +7,7 @@ const restaurantSchema = new Schema(
     impressions: [
       {
         type: Schema.Types.ObjectId,
-        ref: "Impressions",
+        ref: "Impression",
       },
     ],
     name: { type: String },
