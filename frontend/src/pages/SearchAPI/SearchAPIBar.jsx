@@ -9,15 +9,16 @@ export default function SearchAPIBar() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    console.log(newSearch);
+    // console.log(newSearch);
     await createSearchResultsList(newSearch);
-    setNewSearch(initState);
+    // setNewSearch(initState);
   }
   function handleChange(e) {
     const updatedQuery = { [e.target.name]: e.target.value };
     console.log(e.target)
     console.log(updatedQuery);
     setNewSearch(updatedQuery);
+    // console.log(newSearch)
   }
 
   return (

@@ -29,11 +29,11 @@ export async function index() {
 
       const res = await fetch(OTHER_URL, config);
     
-      console.log(res);
+      // console.log(res);
     
       if (res.ok) {
         const data = await res.json() 
-        console.log(data)
+        // console.log(data)
         ///Set State Data variable => display//Get this to searchResults list (by either lifting state or useContext)
       } else {
         throw new Error("Invalid Request");

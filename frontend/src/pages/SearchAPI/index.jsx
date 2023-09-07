@@ -3,14 +3,16 @@ import SearchResultsList from "./SearchResultsList";
 import SearchAPIBar from "./SearchAPIBar";
 import { getSearchResult } from "../../utilities/SearchAPI/search-service";
 //add a spinner
-
-export default function Search() {
+//**************Need props * */
+export default function Search() { //need restaurant props
   const [results, setResults] = useState([]);
 
   async function handleRequest() {
+    console.log("hello")
     const searchResponse = await getSearchResult();
     if (searchResponse.length) {
       setResults(searchResponse);
+      console.log(results)
     } else {
       console.log(searchResponse);
     }
