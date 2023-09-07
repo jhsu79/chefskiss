@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 //restaurant Schema w/ parameters
 const restaurantSchema = new Schema(
   {
-    impressions: [
+    impression: [
       {
         type: Schema.Types.ObjectId,
         ref: "Impression",

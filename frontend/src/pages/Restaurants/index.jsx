@@ -1,7 +1,7 @@
 import {useState, useEffect } from 'react'
 import RestaurantList from "./RestaurantList"
 import {getRestaurant} from '../../utilities/restaurant/restaurant-service'
-
+//add a spinner
 export default function Restaurants(props) {
     const [restaurant, setRestaurant]= useState([])
 
