@@ -1,4 +1,4 @@
-const API_BASE_URL = process.env.API_BASE_URL
+const API_BASE_URL = process.env.API_BASE_URL;
 //GET Search Results
 export async function index() {
     const res = await fetch (API_BASE_URL, {
@@ -17,6 +17,7 @@ export async function index() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          // "Authorization": tokens
         },
         body: JSON.stringify(data),
       };
