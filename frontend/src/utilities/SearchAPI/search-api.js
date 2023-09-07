@@ -1,8 +1,9 @@
 
 const API_BASE_URL = process.env.API_BASE_URL
 const BASE_URL = process.env.REACT_APP_BASE_URL 
-const OTHER_URL = process.env.OTHER_BASE_URL
-
+const OTHER_URL = process.env.REACT_APP_OTHER_BASE_URL
+console.log(BASE_URL)
+console.log(OTHER_URL)
 //Connect backend to frontend for API. 
 
 
@@ -33,7 +34,9 @@ export async function index() {
       console.log(res);
     
       if (res.ok) {
-        return res.json();
+        const data = await res.json() 
+        console.log(data)
+        ///Set State Data variable => display//Get this to searchResults list (by either lifting state or useContext)
       } else {
         throw new Error("Invalid Request");
       }

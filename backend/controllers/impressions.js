@@ -1,4 +1,3 @@
-const { Restaurant } = require("../models");
 const { Impression } = require("../models");
 
 module.exports = {

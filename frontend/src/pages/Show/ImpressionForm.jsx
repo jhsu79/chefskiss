@@ -17,8 +17,15 @@ const initState = {
 //deal with how to conditionally render the impression form and impressions. 
 //add a spinner 
 
+
+
 export default function NewImpressionForm({}) {
   const [newForm, setNewForm] = useState(initState);
+
+  async function handleSubmit(e){
+    e.preventDefault()
+    console.log(newForm)
+  }
   return (
     <div className="form-container">
       <form>
