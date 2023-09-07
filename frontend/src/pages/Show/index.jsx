@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { showRestaurant, deleteRestaurant } from "../../utilities/restaurant/restaurant-service";
-
-
+import NewImpressionForm from './ImpressionForm'
+//add a spinner component
 export default function Show(props) {
     const [restaurant, setRestaurant]= useState(null)
         const navigate = useNavigate() 

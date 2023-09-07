@@ -11,6 +11,12 @@ const initState = {
   futureVisit: null,
 };
 
+//todo add handlesubmit functions and handleonchange functions here. 
+//onsubmit add a navigate function back to this page? 
+//populate the api and service modules for impressions to hit backroutes. 
+//deal with how to conditionally render the impression form and impressions. 
+//add a spinner 
+
 export default function NewImpressionForm({}) {
   const [newForm, setNewForm] = useState(initState);
   return (
