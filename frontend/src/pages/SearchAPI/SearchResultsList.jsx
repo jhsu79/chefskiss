@@ -2,6 +2,7 @@ import {useState} from "react"
 import { useNavigate } from 'react-router-dom'
 import {createRestaurant} from "../../utilities/restaurant/restaurant-service"
 
+//create a useState or useContext to pull down the info from search-api. 
 
 export default function SearchResultsList({ results }) {
     // HERE's the submit function.... 
