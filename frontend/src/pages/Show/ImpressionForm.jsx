@@ -16,9 +16,7 @@ const initState = {
 //deal with how to conditionally render the impression form and impressions. 
 //add a spinner 
 
-
-
-export default function NewImpressionForm({}) {
+export default function NewImpressionForm({updateImpression}) {
   const [newForm, setNewForm] = useState(initState);
 
   async function handleSubmit(e){
@@ -27,7 +25,7 @@ export default function NewImpressionForm({}) {
   }
   return (
     <div className="form-container">
-      <form>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="ambiance">
         <input type='radio'></input>
         </label>

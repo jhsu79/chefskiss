@@ -1,5 +1,4 @@
 
-const API_BASE_URL = process.env.API_BASE_URL
 const BASE_URL = process.env.REACT_APP_BASE_URL 
 const OTHER_URL = process.env.REACT_APP_OTHER_BASE_URL
 console.log(BASE_URL)

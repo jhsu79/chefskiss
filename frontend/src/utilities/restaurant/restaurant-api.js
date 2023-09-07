@@ -31,7 +31,7 @@ export async function index() {
       }
     }
 
-    export async function detail(id) {
+    export async function show(id) {
       const URL = `${BASE_URL}/${id}`;
       const config = {
         method: "GET",
