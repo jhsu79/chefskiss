@@ -1,7 +1,12 @@
 const API_BASE_URL = process.env.API_BASE_URL
+const BASE_URL = process.env.REACT_APP_BASE_URL 
+const OTHER_URL = process.env.OTHER_BASE_URL
+
+//Connect backend to frontend for API. 
 //GET Search Results
+
 export async function index() {
-    const res = await fetch (API_BASE_URL, {
+    const res = await fetch (OTHER_URL, {
         method: "GET",
     })
     if (res.ok) {
@@ -21,7 +26,7 @@ export async function index() {
         body: JSON.stringify(data),
       };
 
-      const res = await fetch(API_BASE_URL, config);
+      const res = await fetch(OTHER_URL, config);
     
       console.log(res);
     

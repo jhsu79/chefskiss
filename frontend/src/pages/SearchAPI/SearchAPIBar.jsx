@@ -27,3 +27,5 @@ export default function SearchAPIBar() {
             </div>
     )
 }
+
+//maybe an input type component? 
