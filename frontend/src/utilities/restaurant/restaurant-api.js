@@ -1,4 +1,5 @@
 const BASE_URL = process.env.REACT_APP_BASE_URL 
+
 export async function index() {
     const res = await fetch (BASE_URL, {
         method: "GET",
@@ -30,7 +31,7 @@ export async function index() {
       }
     }
 
-    export async function detail(id) {
+    export async function show(id) {
       const URL = `${BASE_URL}/${id}`;
       const config = {
         method: "GET",

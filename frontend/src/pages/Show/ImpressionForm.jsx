@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { createImpression } from "../../utilities/impression/impression-service";
+import { createImpression, editImpression, updateImpression, deleteImpression } from "../../utilities/impression/impression-service";
 
 const initState = {
   ambiance: 3,
@@ -13,13 +13,10 @@ const initState = {
 
 //todo add handlesubmit functions and handleonchange functions here. 
 //onsubmit add a navigate function back to this page? 
-//populate the api and service modules for impressions to hit backroutes. 
 //deal with how to conditionally render the impression form and impressions. 
 //add a spinner 
 
-
-
-export default function NewImpressionForm({}) {
+export default function NewImpressionForm({updateImpression}) {
   const [newForm, setNewForm] = useState(initState);
 
   async function handleSubmit(e){
@@ -28,7 +25,7 @@ export default function NewImpressionForm({}) {
   }
   return (
     <div className="form-container">
-      <form>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="ambiance">
         <input type='radio'></input>
         </label>

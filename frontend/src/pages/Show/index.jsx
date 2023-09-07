@@ -3,8 +3,6 @@ import { useParams, useNavigate } from "react-router-dom";
 import { showRestaurant, deleteRestaurant } from "../../utilities/restaurant/restaurant-service";
 import NewImpressionForm from './ImpressionForm'
 
-//import impression modules.
-//add a spinner component
 
 export default function Show(props) {
     const [restaurant, setRestaurant]= useState(null)
@@ -52,7 +50,7 @@ export default function Show(props) {
           <button className="delete" onClick={handleDelete}> Remove Restaurant</button>
         </div>
     <div className='impression-card'>
-        {restaurant.impression}
+        {restaurant.impression.length} ? {restaurant.impression} : <NewImpressionForm/>
     </div>
     </div>)
 }

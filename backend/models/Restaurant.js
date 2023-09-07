@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema; 
 
-//restaurant Schema w/ parameters
+//restaurant Schema w/ parametershttps://desktop.postman.com/?desktopVersion=10.17.4&userId=28828738&teamId=0
 const restaurantSchema = new Schema(
   {
     impression: [
