@@ -17,3 +17,21 @@ export async function createRestaurant(newRestaurantData){
         return err
     }
 }
+//IDENTIFY THE SPECIFIC ID FROM THE DB AND SHOW
+export async function getRestaurant(id){
+    try{
+       const data = await restaurantAPI.detail(id)
+       return data
+    }catch(err){
+        return err
+    }
+}
+//IDENTIFY THE SPECIFIC ID FROM THE DB TO DESTROY
+export async function deleteRestaurant(id){
+    try{
+       const data = await restaurantAPI.destroy(id)
+       return data
+    }catch(err){
+        return err
+    }
+}

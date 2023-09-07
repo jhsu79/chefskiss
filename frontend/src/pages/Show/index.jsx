@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { getRestaurant, deleteRestaurant } from "../../utilities/people-service";
+import { getRestaurant, deleteRestaurant } from "../../utilities/restaurant/restaurant-service";
 
 
 export default function Show(props) {
@@ -38,12 +38,18 @@ export default function Show(props) {
                 handleRequest()
             }, [])
 
-    return (<div className='restaurant-card'>
+    return (
+    <div className='show-page'>
+    <div className='restaurant-card'>
         <h3>{restaurant.name}</h3>
           <p>Categories: {restaurant.categories}</p>
           <p>Phone: {restaurant.display_phone}</p>
           <p>Address: {restaurant.display_address}</p>
           <p>Link: {restaurant.url}</p>
           <button className="delete" onClick={handleDelete}> Remove Restaurant</button>
+        </div>
+    <div className='impression-card'>
+        {restaurant.impression}
+    </div>
     </div>)
 }
