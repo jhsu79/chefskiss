@@ -7,6 +7,7 @@ module.exports = {
   delete: destroy,
 };
 
+//index function for CRUD
 async function index(req, res) {
   try {
     res.status(200).json(await Restaurant.find());
@@ -15,6 +16,7 @@ async function index(req, res) {
   }
 }
 
+//create function for CRUD
 async function create(req, res) {
   try {
     res.status(201).json(await Restaurant.create(req.body));
@@ -23,6 +25,7 @@ async function create(req, res) {
   }
 }
 
+//show function for CRUD 
 async function show(req, res) {
   try {
     res.status(200).json(await Restaurant.findById(req.params.id));
@@ -31,6 +34,7 @@ async function show(req, res) {
   }
 }
 
+//delete function for CRUD
 async function destroy(req, res) {
   try {
     res.status(200).json(await Restaurant.findByIdAndDelete(req.params.id));

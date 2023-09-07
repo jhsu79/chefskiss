@@ -1,5 +1,4 @@
 const BASE_URL = process.env.REACT_APP_BASE_URL 
-
 export async function index() {
     const res = await fetch (BASE_URL, {
         method: "GET",
@@ -24,6 +23,34 @@ export async function index() {
     
       console.log(res);
     
+      if (res.ok) {
+        return res.json();
+      } else {
+        throw new Error("Invalid Request");
+      }
+    }
+
+    export async function detail(id) {
+      const URL = `${BASE_URL}/${id}`;
+      const config = {
+        method: "GET",
+      };
+      const res = await fetch(URL, config);
+      console.log(res);
+      if (res.ok) {
+        return res.json();
+      } else {
+        throw new Error("Invalid Request");
+      }
+    }
+    
+    export async function destroy(id){
+      const URL = `${BASE_URL}/${id}`;
+      const config = {
+        method: "DELETE",
+      };
+      const res = await fetch(URL, config);
+      console.log(res);
       if (res.ok) {
         return res.json();
       } else {
