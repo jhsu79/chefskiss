@@ -8,7 +8,6 @@ export default function Search() {
 
   async function handleRequest() {
     const searchResponse = await getSearchResult();
-
     if (searchResponse.length) {
       setResults(searchResponse);
     } else {
