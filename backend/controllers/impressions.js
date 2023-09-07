@@ -1,3 +1,4 @@
+const { Restaurant } = require("../models")
 const { Impression } = require("../models");
 
 module.exports = {
@@ -11,7 +12,14 @@ module.exports = {
 //create functions for CRUD
 async function create(req, res) {
   try {
-    res.status(201).json(await Impression.create(req.body));
+    const id = req.params.id
+    const newImpression = await Impression.create(req.body)
+    const restaurant = await Restaurant.findById(id)
+    restaurant.impression.push(newImpression)
+    restaurant.save()
+    
+    console.log(restaurant)
+    res.status(201).json(newImpression)
   } catch (error) {
     res.status(400).json({ error: error.message });
   }

@@ -20,7 +20,7 @@ export async function createRestaurant(newRestaurantData){
 //IDENTIFY THE SPECIFIC ID FROM THE DB AND SHOW
 export async function showRestaurant(id){
     try{
-       const data = await restaurantAPI.detail(id)
+       const data = await restaurantAPI.show(id)
        return data
     }catch(err){
         return err
