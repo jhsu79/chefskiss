@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { getRestaurant, deleteRestaurant } from "../../utilities/restaurant/restaurant-service";
+import { showRestaurant, deleteRestaurant } from "../../utilities/restaurant/restaurant-service";
 
 
 export default function Show(props) {
@@ -9,7 +9,7 @@ export default function Show(props) {
         const { id } = useParams() 
     
         async function handleRequest(){
-            const restaurantResponse = await getRestaurant(id);
+            const restaurantResponse = await showRestaurant(id);
             console.log(restaurantResponse); 
             if (restaurant?._id){
                 setRestaurant(restaurantResponse)

@@ -18,7 +18,7 @@ export async function createRestaurant(newRestaurantData){
     }
 }
 //IDENTIFY THE SPECIFIC ID FROM THE DB AND SHOW
-export async function getRestaurant(id){
+export async function showRestaurant(id){
     try{
        const data = await restaurantAPI.detail(id)
        return data
