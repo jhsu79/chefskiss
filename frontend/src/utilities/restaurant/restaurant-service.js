@@ -28,10 +28,13 @@ export async function showRestaurant(id){
 }
 //IDENTIFY THE SPECIFIC ID FROM THE DB TO DESTROY
 export async function deleteRestaurant(id){
+    console.log('delete Path')
     try{
+        console.log('made it')
        const data = await restaurantAPI.destroy(id)
        return data
     }catch(err){
+        console.log('nope')
         return err
     }
 }

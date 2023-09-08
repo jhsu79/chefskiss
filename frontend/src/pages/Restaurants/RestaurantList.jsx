@@ -1,18 +1,45 @@
+import { deleteRestaurant } from "../../utilities/restaurant/restaurant-service";
+import { useNavigate } from "react-router-dom";
+
 export default function RestaurantList({ restaurants }) {
+
+
+  const navigate = useNavigate();
+ 
+
+  async function handleDelete(id) {
+    try {
+      console.log(id);
+      const deleteResponse = await deleteRestaurant(id);
+      if (deleteResponse._id) {
+        console.log("redirecting");
+        navigate("/");
+      } else {
+        throw Error("something went wrong");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+
   return (
     <section className="restaurant-list">
-      {restaurants.map((restaurant, idx) => (
-        <div className="restaurant-card" key={restaurant._id}>
-          <h3>{restaurant.name}</h3>
+      {restaurants.map((restaurantDetail, idx) => (
+        <div className="restaurant-card" key={restaurantDetail._id}>
+          <h3>{restaurantDetail.name}</h3>
           {/* <p>Categories: {restaurant.categories}</p> */}
-          <p>Phone: {restaurant.display_phone}</p>
+          <p>Phone: {restaurantDetail.display_phone}</p>
           <p>
-            Address: {restaurant.display_address0 + "."}
-            {" " + restaurant.display_address1}
+            Address: {restaurantDetail.display_address0 + "."}
+            {" " + restaurantDetail.display_address1}
           </p>
-          <p> Rating: {restaurant.rating}</p>
-          <p> Price: {restaurant.price}</p>
-          <a href={restaurant.url}>See Yelp Reviews</a>
+          <p> Rating: {restaurantDetail.rating}</p>
+          <p> Price: {restaurantDetail.price}</p>
+          <a href={restaurantDetail.url}>See Yelp Reviews</a>
+          <button className="button" onClick={()=>{handleDelete(restaurantDetail._id)}}>
+            Remove Restaurant from list
+          </button>
         </div>
       ))}
     </section>
