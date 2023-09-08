@@ -4,19 +4,21 @@ const initState = {
   location: "",
 };
 
-export default function SearchAPIBar({setResults}) {
+export default function SearchAPIBar({ setResults }) {
   const [newSearch, setNewSearch] = useState(initState);
 
   async function handleSubmit(e) {
     e.preventDefault();
     console.log(newSearch);
     const results = await getSearchResultsList(newSearch);
-    setResults(results)
+    if (results.businesses){
+      setResults(results);
+    } 
     setNewSearch(initState);
   }
   function handleChange(e) {
     const updatedQuery = { [e.target.name]: e.target.value };
-    console.log(e.target)
+    console.log(e.target);
     console.log(updatedQuery);
     setNewSearch(updatedQuery);
   }
