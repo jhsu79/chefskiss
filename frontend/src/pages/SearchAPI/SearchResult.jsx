@@ -10,7 +10,7 @@ export default function SearchResult({ searchResult, idx }) {
   const [categories, setCategories] = useState([])
   const [display_phone, setDisplayPhone] = useState("")
   const [display_address, setDisplayAddress] = useState("")
-  
+const navigate = useNavigate()
  
   useEffect(()=>{
     setName(searchResult.name)
@@ -44,7 +44,7 @@ export default function SearchResult({ searchResult, idx }) {
       <p> Phone: {searchResult.display_phone}</p>
       {/* <p> Address: {searchResult.location.display_address[0]}</p>
       <p>{searchResult.location.display_address[1]}</p> */}
-      <a href={searchResult.url}> Yelp Reviews </a>
+      <a href={searchResult.url}> Click on this to see the Yelp Reviews </a>
       <button onClick={saveRestaurant}>Save this Restaurant</button>
     </div>
   );
