@@ -1,27 +1,29 @@
-import {useState, useEffect } from 'react'
-import RestaurantList from "./RestaurantList"
-import {getRestaurant} from '../../utilities/restaurant/restaurant-service'
-//add a spinner
+import { useState, useEffect } from "react";
+import RestaurantList from "./RestaurantList";
+import { getRestaurant } from "../../utilities/restaurant/restaurant-service";
+
 export default function Restaurants(props) {
-    const [restaurant, setRestaurant]= useState([])
+  const [restaurant, setRestaurant] = useState([]);
 
-    async function handleRequest(){
-        const restaurantResponse = await getRestaurant()
+  async function handleRequest() {
+    const restaurantResponse = await getRestaurant();
 
-        if(restaurantResponse.length) {
-            setRestaurant(restaurantResponse)
-        } else { 
-            console.log(restaurantResponse)
-        }
+    if (restaurantResponse.length) {
+      setRestaurant(restaurantResponse);
+    } else {
+      console.log(restaurantResponse);
     }
+  }
 
-    useEffect(()=>{
-        handleRequest()
-    }, [])
+  useEffect(() => {
+    handleRequest();
+  }, []);
 
-    return (<div className='restaurants'>
-    <RestaurantList restaurants={ restaurant }/>
-                                                    </div>)
-    
+  return (
+    <div className="restaurants">
+      <RestaurantList restaurants={restaurant} />
+    </div>
+  );
 }
 
+//add loading state with a spinner

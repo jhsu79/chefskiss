@@ -9,17 +9,15 @@ export default function SearchAPIBar({ setResults }) {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    console.log(newSearch);
     const results = await getSearchResultsList(newSearch);
-    if (results.businesses){
+    if (results.businesses) {
       setResults(results);
-    } 
+    }
     setNewSearch(initState);
   }
   function handleChange(e) {
     const updatedQuery = { [e.target.name]: e.target.value };
     setNewSearch(updatedQuery);
-    // console.log(newSearch)
   }
 
   return (
@@ -39,4 +37,4 @@ export default function SearchAPIBar({ setResults }) {
   );
 }
 
-//maybe an input type component?
+//Add a loading state and add spinner

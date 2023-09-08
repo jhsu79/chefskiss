@@ -40,3 +40,5 @@ export default function RestaurantList({ restaurants }) {
     </section>
   );
 }
+
+//Create a component for all RestaurantDetail and refactor props
