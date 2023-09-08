@@ -7,7 +7,7 @@ export default function SearchResult({ searchResult, idx }) {
   // console.log('hello world')
   // console.log({address1, address2})
   const [name, setName] = useState("")
-  const [categories, setCategories] = useState("")
+  // const [categories, setCategories] = useState("")
   const [display_phone, setDisplayPhone] = useState("")
   const [display_address0, setDisplayAddress0] = useState("")
   const [display_address1, setDisplayAddress1] = useState("")
@@ -16,7 +16,7 @@ const navigate = useNavigate()
  
   useEffect(()=>{
     setName(searchResult.name)
-    setCategories(searchResult.categories)
+    // setCategories(searchResult.categories)
     setDisplayPhone(searchResult.display_phone)
     setDisplayAddress0(searchResult.location.display_address[0])
     setDisplayAddress1(searchResult.location.display_address[1])
@@ -25,8 +25,8 @@ const navigate = useNavigate()
   
   
   async function saveRestaurant() {
-    console.log({categories})
-    await createRestaurant({name, display_phone, url, display_address0, display_address1, categories });
+    // console.log({categories})
+    await createRestaurant({name, display_phone, url, display_address0, display_address1 });
     navigate("/");
   }
 

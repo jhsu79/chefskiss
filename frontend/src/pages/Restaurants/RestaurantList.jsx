@@ -4,7 +4,7 @@ export default function RestaurantList({ restaurants }) {
       {restaurants.map((restaurant, idx) => (
         <div className="restaurant-card" key={restaurant._id}>
           <h3>{restaurant.name}</h3>
-          <p>Categories: {restaurant.categories}</p>
+          {/* <p>Categories: {restaurant.categories}</p> */}
           <p>Phone: {restaurant.display_phone}</p>
           <p>
             Address: {restaurant.display_address0 + "."}

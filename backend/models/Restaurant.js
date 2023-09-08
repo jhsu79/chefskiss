@@ -5,7 +5,7 @@ const restaurantSchema = new Schema(
   {
 
     name: { type: String },
-    categories: [{ type: String }],
+    // categories: [{ type: String }],
     display_phone: { type: String },
     display_address0: {type: String},
     display_address1: {type: String},
