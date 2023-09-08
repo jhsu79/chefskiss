@@ -5,6 +5,7 @@ import {createRestaurant} from "../../utilities/restaurant/restaurant-service"
 //create a useState or useContext to pull down the info from search-api. 
 
 export default function SearchResultsList({ results }) {
+  console.log({searchResultsList: results})
     // HERE's the submit function.... 
     // async function handleSubmit(e){
     //   e.preventDefault() 
@@ -14,24 +15,24 @@ export default function SearchResultsList({ results }) {
 
     return (
       <section className="search-results-list">
-        {results.map((result, idx) => (
-      
-          <div className="search-card" key={result._id}>
-            <h3>Name: {result.name}</h3>
-            <p> Categories: {result.categories}</p>
-            <p> Phone: {result.display_phone}</p>
-            <p> Address: {result.display_address}</p>
-            <p> Link: {result.url}</p>
+        { results.businesses.map((business, idx) => {
+          return (
+          <div className="search-card" key={business._id}>
+            <h3>Name: {business.name}</h3>
+            <p> Categories: {business.categories}</p>
+            <p> Phone: {business.display_phone}</p>
+            <p> Address: {business.display_address}</p>
+            <p> Link: {business.url}</p>
             {/* <form onSubmit={(e)=>handleSubmit(e)}>
-              <input type='hidden' value={result.name}/>
-              <input type='hidden' value={result.categories}/>
-              <input type='hidden' value={result.display_phone}/>
-              <input type='hidden' value={result.display_address}/>
-              <input type='hidden' value={result.url}/>
+              <input type='hidden' value={business.name}/>
+              <input type='hidden' value={business.categories}/>
+              <input type='hidden' value={business.display_phone}/>
+              <input type='hidden' value={business.display_address}/>
+              <input type='hidden' value={business.url}/>
               <button>Save<Submit> 
             </form> */}
-          </div>
-        ))}
+          </div>)
+        })}
       </section>
     );
   }

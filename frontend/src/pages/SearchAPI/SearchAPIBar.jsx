@@ -1,16 +1,17 @@
 import { useState } from "react";
-import { createSearchResultsList } from "../../utilities/SearchAPI/search-service";
+import { getSearchResultsList } from "../../utilities/SearchAPI/search-service";
 const initState = {
   location: "",
 };
 
-export default function SearchAPIBar() {
+export default function SearchAPIBar({setResults}) {
   const [newSearch, setNewSearch] = useState(initState);
 
   async function handleSubmit(e) {
     e.preventDefault();
     console.log(newSearch);
-    await createSearchResultsList(newSearch);
+    const results = await getSearchResultsList(newSearch);
+    setResults(results)
     setNewSearch(initState);
   }
   function handleChange(e) {

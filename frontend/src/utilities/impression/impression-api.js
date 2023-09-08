@@ -1,4 +1,4 @@
-const BASE_URL = process.env.REACT_APP_IMPRESSION_URL;
+const BASE_URL = process.env.REACT_APP_URL;
 
 export async function create(data) {
   const config = {
