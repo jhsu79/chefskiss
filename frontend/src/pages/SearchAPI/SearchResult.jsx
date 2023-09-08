@@ -9,7 +9,8 @@ export default function SearchResult({ searchResult, idx }) {
   const [name, setName] = useState("")
   const [categories, setCategories] = useState([])
   const [display_phone, setDisplayPhone] = useState("")
-  const [address1, setAddress1] = useState("")
+  const [display_address0, setDisplayAddress0] = useState("")
+  const [display_address1, setDisplayAddress1] = useState("")
   const [url, setUrl] = useState("")
 const navigate = useNavigate()
  
@@ -17,14 +18,15 @@ const navigate = useNavigate()
     setName(searchResult.name)
     setCategories(searchResult.categories)
     setDisplayPhone(searchResult.display_phone)
-    setAddress1(searchResult.location.address1)
+    setDisplayAddress0(searchResult.location.display_address[0])
+    setDisplayAddress1(searchResult.location.display_address[1])
     setUrl(searchResult.url)
 }, [searchResult])
   
   
   async function saveRestaurant() {
     console.log({name, categories, display_phone})
-    await createRestaurant({name, display_phone, url, address1});
+    await createRestaurant({name, display_phone, url, display_address0, display_address1 });
     navigate("/");
   }
 
