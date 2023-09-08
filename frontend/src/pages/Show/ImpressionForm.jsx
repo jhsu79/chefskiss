@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { createImpression, editImpression, updateImpression, deleteImpression } from "../../utilities/impression/impression-service";
+import { createImpression, updateImpression } from "../../utilities/impression/impression-service";
 
 const initState = {
   ambiance: 3,

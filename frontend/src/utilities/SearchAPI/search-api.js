@@ -17,7 +17,7 @@ export async function index() {
     }
 
     //POST Search to get the results.  
-    export async function create(data) {
+    export async function fetchResultsFromYelp(data) {
       const config = {
         method: "POST",
         headers: {
@@ -34,6 +34,7 @@ export async function index() {
       if (res.ok) {
         const data = await res.json() 
         console.log(data)
+        return data
         ///Set State Data variable => display//Get this to searchResults list (by either lifting state or useContext)
       } else {
         throw new Error("Invalid Request");

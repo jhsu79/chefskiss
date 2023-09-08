@@ -1,22 +1,23 @@
 import { useState } from "react";
-import { createSearchResultsList } from "../../utilities/SearchAPI/search-service";
+import { getSearchResultsList } from "../../utilities/SearchAPI/search-service";
 const initState = {
   location: "",
 };
 
-export default function SearchAPIBar() {
+export default function SearchAPIBar({ setResults }) {
   const [newSearch, setNewSearch] = useState(initState);
 
   async function handleSubmit(e) {
     e.preventDefault();
     console.log(newSearch);
-    await createSearchResultsList(newSearch);
+    const results = await getSearchResultsList(newSearch);
+    if (results.businesses){
+      setResults(results);
+    } 
     setNewSearch(initState);
   }
   function handleChange(e) {
     const updatedQuery = { [e.target.name]: e.target.value };
-    console.log(e.target)
-    console.log(updatedQuery);
     setNewSearch(updatedQuery);
   }
 
