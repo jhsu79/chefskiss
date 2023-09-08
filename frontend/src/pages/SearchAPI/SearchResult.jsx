@@ -9,27 +9,27 @@ export default function SearchResult({ searchResult, idx }) {
   const [name, setName] = useState("")
   const [categories, setCategories] = useState([])
   const [display_phone, setDisplayPhone] = useState("")
-  const [display_address, setDisplayAddress] = useState("")
+  const [address1, setAddress1] = useState("")
+  const [url, setUrl] = useState("")
 const navigate = useNavigate()
  
   useEffect(()=>{
     setName(searchResult.name)
     setCategories(searchResult.categories)
     setDisplayPhone(searchResult.display_phone)
-    setDisplayAddress(searchResult.display_address)
-
+    setAddress1(searchResult.location.address1)
+    setUrl(searchResult.url)
 }, [searchResult])
   
   
   async function saveRestaurant() {
-    await createRestaurant({
-      name,
-      categories,
-      display_phone,
-      display_address,
-    });
+    console.log({name, categories, display_phone})
+    await createRestaurant({name, display_phone, url, address1});
     navigate("/");
   }
+
+
+  // , categories, display_phone, display_address
 
   return (
     <div className="search-card" key={`searchResults-${idx}`}>
@@ -42,9 +42,12 @@ const navigate = useNavigate()
         })}
       </p>
       <p> Phone: {searchResult.display_phone}</p>
-      {/* <p> Address: {searchResult.location.display_address[0]}</p>
-      <p>{searchResult.location.display_address[1]}</p> */}
-      <a href={searchResult.url}> Click on this to see the Yelp Reviews </a>
+      <p> Address: {searchResult.location.display_address[0] + "."}{" " + searchResult.location.display_address[1]}</p>
+
+
+      {/* 
+      <p>{searchResult.location.city}{searchResult.location.country}</p> */}
+      <a href={searchResult.url}> See the Yelp Reviews </a>
       <button onClick={saveRestaurant}>Save this Restaurant</button>
     </div>
   );

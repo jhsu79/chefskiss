@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import SearchResultsList from "./SearchResultsList";
 import SearchAPIBar from "./SearchAPIBar";
 //add a spinner
