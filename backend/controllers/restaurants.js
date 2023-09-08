@@ -1,5 +1,6 @@
 const { Restaurant } = require("../models")
 
+
 module.exports = {
   index,
   create,
@@ -19,8 +20,10 @@ async function index(req, res) {
 //create function for CRUD
 async function create(req, res) {
   try {
+    console.log(req.body)
     res.status(201).json(await Restaurant.create(req.body));
   } catch (error) {
+    console.log(error)
     res.status(400).json({ error: error.message });
   }
 }

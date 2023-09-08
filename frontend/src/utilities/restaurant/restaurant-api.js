@@ -19,14 +19,16 @@ export async function index() {
         },
         body: JSON.stringify(data),
       };
-
+      console.log(config, 'this is the config');
       const res = await fetch(BASE_URL, config);
+
     
-      console.log(res);
+      console.log('this is the res', res);
     
       if (res.ok) {
         return res.json();
       } else {
+        console.log('this is the status', res.statusText)
         throw new Error("Invalid Request");
       }
     }
