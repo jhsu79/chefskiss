@@ -1,21 +1,15 @@
 const mongoose = require("mongoose");
-const Schema = mongoose.Schema; 
+const Schema = mongoose.Schema;
 
-//restaurant Schema w/ parameters
 const restaurantSchema = new Schema(
   {
-    impression: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: "Impression",
-      },
-    ],
     name: { type: String },
-    display_address: { type: String },
-    categories: [{ type: String }],
     display_phone: { type: String },
+    display_address0: { type: String },
+    display_address1: { type: String },
     url: { type: String },
-    
+    rating: { type: Number },
+    price: { type: String },
   },
   {
     timestamps: true,
