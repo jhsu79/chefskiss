@@ -7,11 +7,8 @@ export default function RestaurantList({ restaurants }) {
           <p>Categories: {restaurant.categories}</p>
           <p>Phone: {restaurant.display_phone}</p>
           <p>
-            {/* Address: {restaurant.display_address0} ?  */}
-            {restaurant.display_address0 + "."}
+            Address: {restaurant.display_address0 + "."}
             {" " + restaurant.display_address1}
-            {/* : */}
-            {/* {" " + restaurant.display_address1} */}
             </p>
           <a href={restaurant.url}>See Yelp Reviews</a>
         </div>

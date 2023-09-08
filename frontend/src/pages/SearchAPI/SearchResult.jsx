@@ -7,7 +7,7 @@ export default function SearchResult({ searchResult, idx }) {
   // console.log('hello world')
   // console.log({address1, address2})
   const [name, setName] = useState("")
-  const [categories, setCategories] = useState([])
+  const [categories, setCategories] = useState("")
   const [display_phone, setDisplayPhone] = useState("")
   const [display_address0, setDisplayAddress0] = useState("")
   const [display_address1, setDisplayAddress1] = useState("")
@@ -25,13 +25,11 @@ const navigate = useNavigate()
   
   
   async function saveRestaurant() {
-    console.log({name, categories, display_phone})
-    await createRestaurant({name, display_phone, url, display_address0, display_address1 });
+    console.log({categories})
+    await createRestaurant({name, display_phone, url, display_address0, display_address1, categories });
     navigate("/");
   }
 
-
-  // , categories, display_phone, display_address
 
   return (
     <div className="search-card" key={`searchResults-${idx}`}>
