@@ -1,23 +1,21 @@
-import './App.css';
-
-import {useState} from 'react'
-import Header from "./components/Header"
-import Main from "./components/Main"
-import { RestaurantContext } from './data/RestaurantContext'
+import "./App.css";
+import { useState } from "react";
+import Header from "./components/Header";
+import Main from "./components/Main";
+import { RestaurantContext } from "./data/RestaurantContext";
 
 function App() {
-const {Provider: RestaurantData } = RestaurantContext;
-const [state, setState] = useState({
-  error:""
-})
+  const { Provider: RestaurantData } = RestaurantContext;
+  const [state, setState] = useState({
+    error: "",
+  });
   return (
     <div className="App">
-      <RestaurantData value= {state}>
-     <Header/>
-     <Main/>
-     </RestaurantData>
+      <RestaurantData value={state}>
+        <Header />
+        <Main />
+      </RestaurantData>
     </div>
-  
   );
 }
 

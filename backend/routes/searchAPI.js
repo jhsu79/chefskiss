@@ -1,8 +1,8 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const searchAPICtrl = require('../controllers/searchAPI');
+const searchAPICtrl = require("../controllers/searchAPI");
 
 // searchYelp route
-router.post('/yelp-search', searchAPICtrl.searchYelp);
+router.post("/yelp-search", searchAPICtrl.searchYelp);
 
-module.exports = router
+module.exports = router;
