@@ -10,13 +10,14 @@ export default function RestaurantList({ restaurants }) {
   async function handleDelete(id) {
     try {
       console.log(id);
-      const deleteResponse = await deleteRestaurant(id);
-      if (deleteResponse._id) {
-        console.log("redirecting");
-        navigate("/");
-      } else {
-        throw Error("something went wrong");
-      }
+      const deleteResponse = await deleteRestaurant(id)
+      .then (navigate(0))
+      // if (deleteResponse) {
+      //   throw Error("something went wrong");
+      // } else {
+      //   console.log("redirecting");
+      //   window.location.reload();
+      // }
     } catch (error) {
       console.log(error);
     }
