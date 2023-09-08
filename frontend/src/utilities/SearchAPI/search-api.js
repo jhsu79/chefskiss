@@ -29,7 +29,7 @@ export async function index() {
 
       const res = await fetch(OTHER_URL, config);
     
-      console.log(res);
+      // console.log(res);
     
       if (res.ok) {
         const data = await res.json() 
