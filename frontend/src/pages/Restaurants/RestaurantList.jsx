@@ -43,7 +43,7 @@ export default function RestaurantList({ restaurants }) {
               handleDelete(restaurantDetail._id);
             }}
           >
-            Remove Restaurant from list
+            Remove Restaurant
           </button>
         </div>
       ))}
