@@ -23,12 +23,12 @@ app.use("/restaurants", restaurantsRouter);
 app.use("/search", searchAPIRouter);
 
 app.get("/", (req, res) => {
-  res.send("hello world");
+  res.send("Hello World!");
 });
 
 
 
 
-app.listen(PORT || LOCAL, () => {
+app.listen(PORT.PORT || LOCAL, () => {gi
   console.log(`Server started on ${(PORT || LOCAL)}`);
 });
