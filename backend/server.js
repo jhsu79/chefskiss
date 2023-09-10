@@ -8,9 +8,9 @@ const indexRouter = require("./routes/index");
 const restaurantsRouter = require("./routes/restaurants");
 const searchAPIRouter = require("./routes/searchAPI");
 
-const { PORT } = process.env;
-const { LOCAL } = process.env;
 
+const { LOCAL } = process.env;
+const { PORT } = process.env;
 const app = express()
 
 app.use(express.urlencoded({ extended: true }));
@@ -29,6 +29,6 @@ app.get("/", (req, res) => {
 
 
 
-app.listen(PORT.PORT || LOCAL, () => {gi
+app.listen(PORT.PORT || LOCAL, () => {
   console.log(`Server started on ${(PORT || LOCAL)}`);
 });
