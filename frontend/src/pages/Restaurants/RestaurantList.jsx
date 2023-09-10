@@ -26,7 +26,9 @@ export default function RestaurantList({ restaurants }) {
           </p>
           <p> Rating: {restaurantDetail.rating}</p>
           <p> Price: {restaurantDetail.price}</p>
-          <a href={restaurantDetail.url}>See Yelp Reviews</a>
+          <a href={restaurantDetail.url}>Yelp Reviews</a>
+          <br/>
+          <br/>
           <button
             className="button"
             onClick={() => {

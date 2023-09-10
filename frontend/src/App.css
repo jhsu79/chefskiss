@@ -1,12 +1,59 @@
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-image: url('../src/assets/Bg.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
-  
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url("../src/assets/Bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
+.App {
+  text-align: center;
+}
+
+.header {
+  background-color: #c9a9a9;
+  padding: 20px;
+  /* color: white; */
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  /* background-color: #61dafb; */
+}
+
+.page-links {
+  display: flex;
+  gap: 15px;
+}
+
+.link {
+  color: rgb(248, 246, 246);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #342828;
+}
+
+.link:hover {
+  background-color: #ca2323;
+}
+
+/* .searchbar,
+.search-results-list,
+.restaurant-list {
+  margin: 20px;
+} */
+
+.search-card,
+.restaurant-card {
+  /* border: 1px solid #ccc; */
+  padding: 10px;
+  margin: 10px;
+}
