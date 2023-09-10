@@ -19,18 +19,26 @@ export default function RestaurantList({ restaurants }) {
         <div className="restaurant-card" key={restaurantDetail._id}>
           <h3>{restaurantDetail.name}</h3>
 
-          <p>Phone: {restaurantDetail.display_phone}</p>
           <p>
-            Address: {restaurantDetail.display_address0 + "."}
+            <strong>Phone:</strong> {restaurantDetail.display_phone}
+          </p>
+          <p>
+            <strong>Address:</strong> {restaurantDetail.display_address0 + "."}
             {" " + restaurantDetail.display_address1}
           </p>
-          <p> Rating: {restaurantDetail.rating}</p>
-          <p> Price: {restaurantDetail.price}</p>
-          <a href={restaurantDetail.url}>Yelp Reviews</a>
-          <br/>
-          <br/>
+          <p>
+            <strong>Rating:</strong> {restaurantDetail.rating}
+          </p>
+          <p>
+            <strong>Price:</strong> {restaurantDetail.price}
+          </p>
+          <a href={restaurantDetail.url} style={{ textDecoration: "none" }}>
+            <strong>Yelp Reviews</strong>
+          </a>
+          <br />
+          <br />
           <button
-            className="button"
+            className="delete button"
             onClick={() => {
               handleDelete(restaurantDetail._id);
             }}

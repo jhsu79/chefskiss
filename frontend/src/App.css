@@ -16,7 +16,7 @@ body {
 }
 
 .header {
-  background-color: #c9a9a9;
+  background-color: #cfcccc;
   padding: 20px;
   /* color: white; */
 }
@@ -38,18 +38,18 @@ body {
   text-decoration: none;
   padding: 10px;
   border-radius: 5px;
-  background-color: #342828;
+  background-color: #6b6a6a;
 }
 
 .link:hover {
   background-color: #ca2323;
 }
 
-/* .searchbar,
+.searchbar,
 .search-results-list,
 .restaurant-list {
   margin: 20px;
-} */
+}
 
 .search-card,
 .restaurant-card {
@@ -57,3 +57,28 @@ body {
   padding: 10px;
   margin: 10px;
 }
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .delete.button {
+    background-color: #ff4757;
+    color: #fff;
+  }
+  
+  .delete.button:hover {
+    background-color: #e74c3c;
+    transform: scale(1.05);
+  }
+  
+  .delete.button:active {
+    background-color: #c0392b;
+    transform: scale(0.95);
+  }
+  
