@@ -1,4 +1,4 @@
-import './RestaurantList.css';
+import "./RestaurantList.css";
 import { deleteRestaurant } from "../../utilities/restaurant/restaurant-service";
 import { useNavigate } from "react-router-dom";
 
@@ -15,41 +15,47 @@ export default function RestaurantList({ restaurants }) {
   }
 
   return (
-    <section className="restaurant-list">
-      <h1 className="Rest-list">Restaurant List</h1>
-      {restaurants.map((restaurantDetail, idx) => (
-        <div className="restaurant-card" key={restaurantDetail._id}>
-          <h3>{restaurantDetail.name}</h3>
-          <p>
-            <strong>Phone:</strong> {restaurantDetail.display_phone}
-          </p>
-          <p>
-            <strong>Address:</strong> {restaurantDetail.display_address0 + "."}
+    <section>
+      <h1 className="Rest-list-head">Restaurant List</h1>
+      <div className="restaurant-list">
+        {restaurants.map((restaurantDetail, idx) => (
+          <div className="restaurant-card" key={restaurantDetail._id}>
+            <h3>{restaurantDetail.name}</h3>
+            <p>
+              <strong>Phone:<br></br></strong> {restaurantDetail.display_phone}
+            </p>
+            <p>
+              <strong>Address:<br></br></strong>{" "}
+              {restaurantDetail.display_address0 + "."}
+              <br />
+              {" " + restaurantDetail.display_address1}
+            </p>
+            <p>
+              <strong>Rating:</strong> {restaurantDetail.rating} ⭐️
+            </p>
+            <p>
+              <strong>Price:</strong> {restaurantDetail.price}
+            </p>
+            <a
+              className="review"
+              href={restaurantDetail.url}
+              style={{ textDecoration: "none", color: "red" }}
+            >
+              <strong>Yelp Reviews</strong>
+            </a>
             <br />
-            {" " + restaurantDetail.display_address1}
-          </p>
-          <p>
-            <strong>Rating:</strong> {restaurantDetail.rating}
-          </p>
-          <p>
-            <strong>Price:</strong> {restaurantDetail.price}
-          </p>
-          <a className='review' href={restaurantDetail.url}
-            style={{ textDecoration: "none", color: "red" }}>
-            <strong>Yelp Reviews</strong>
-          </a>
-          <br />
-          <br />
-          <button
-            className="delete button"
-            onClick={() => {
-              handleDelete(restaurantDetail._id);
-            }}
-          >
-            Remove Restaurant
-          </button>
-        </div>
-      ))}
+            <br />
+            <button
+              className="delete button"
+              onClick={() => {
+                handleDelete(restaurantDetail._id);
+              }}
+            >
+              Remove Restaurant
+            </button>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }

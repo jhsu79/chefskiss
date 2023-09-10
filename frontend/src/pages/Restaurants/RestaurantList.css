@@ -25,4 +25,52 @@
     left: 0;
   }
   
+  .restaurant-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 50px;
+    padding: 20px;
+  }
+  
+  .restaurant-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: rgb(182, 155, 120, .5);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  .Rest-list-head {
+    font-family: 'Yellowtail', cursive;
+    color: #fff;
+    font-size: 50px;
+    margin-bottom: 50px; 
+    text-align: center;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .delete.button {
+    background-color: #6b6a6a;
+    color: #fff;
+  }
+  
+  .delete.button:hover {
+    background-color: #ca2323;
+    transform: scale(1.05);
+  }
+  
+  .delete.button:active {
+    background-color: #ca2323;
+    transform: scale(0.95);
+  }
+  
+  
   

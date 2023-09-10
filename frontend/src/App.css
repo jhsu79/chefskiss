@@ -2,11 +2,6 @@
     font-family: 'Yellowtail';
     src: url('../src/assets/Yellowtail-Regular.otf') format('opentype');
   }
-  
-  .Rest-list {
-    font-family: 'Yellowtail', cursive;
-    font-size: 50px;
-  }
 
 body {
   margin: 0;
@@ -57,32 +52,9 @@ body {
 
 .search-card,
 .restaurant-card {
-  /* border: 1px solid #ccc; */
   padding: 10px;
   margin: 10px;
 }
 
-.button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .delete.button {
-    background-color: #6b6a6a;
-    color: #fff;
-  }
-  
-  .delete.button:hover {
-    background-color: #ca2323;
-    transform: scale(1.05);
-  }
-  
-  .delete.button:active {
-    background-color: #ca2323;
-    transform: scale(0.95);
-  }
+
   
