@@ -3,6 +3,9 @@
     display: flex; 
     flex-direction: row;
     align-items: center;
+    width: 100%; 
+    height: 90px; /* Adjust this value to change the height/thickness of the navbar */
+    padding: 0; /* Adjust padding as necessary */
 }
 
 .nav:first-child {
@@ -23,8 +26,9 @@
 }
 
 .headerImage {
-    width: 350px; 
-    height: 150px; 
+    width: 325px; 
+    height: 115px; 
+    margin-top: 16px;
   }
   
   
