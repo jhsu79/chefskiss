@@ -16,16 +16,14 @@ body {
 }
 
 .header {
-  background-color: #cfcccc;
-  padding: 20px;
-  /* color: white; */
+  
+  
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  /* background-color: #61dafb; */
 }
 
 .page-links {
