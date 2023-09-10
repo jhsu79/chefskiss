@@ -39,7 +39,7 @@ James Redden [GitHub](https://github.com/jaredden1) | [LinkedIn](https://www.lin
 5. Worldwide Restaurants API
 
 ##Acknowledgements:
-
+[Deployment Support Article](https://dev.to/stlnick/how-to-deploy-a-full-stack-mern-app-with-heroku-netlify-ncb?utm_source=dormosheio&utm_campaign=dormosheio)
 ##Future Features: 
 1. Restrict a user from saving restaurants in their list more than once. 
 2. Implement Auth0 Authorization. 

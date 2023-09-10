@@ -9,7 +9,9 @@ const restaurantsRouter = require("./routes/restaurants");
 const searchAPIRouter = require("./routes/searchAPI");
 
 const { PORT } = process.env;
-const app = express();
+const { LOCAL } = process.env;
+
+const app = express()
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -24,6 +26,9 @@ app.get("/", (req, res) => {
   res.send("hello world");
 });
 
-app.listen(PORT, () => {
-  console.log(`Server started on ${PORT}`);
+
+
+
+app.listen(PORT || LOCAL, () => {
+  console.log(`Server started on ${(PORT || LOCAL)}`);
 });
