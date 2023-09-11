@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { getSearchResultsList } from "../../utilities/SearchAPI/search-service";
+import "./SearchAPIBar.css";
+
 const initState = {
   location: "",
 };
@@ -16,7 +18,7 @@ export default function SearchAPIBar({ setResults }) {
     setNewSearch(initState);
   }
   function handleChange(e) {
-    const updatedQuery = { [e.target.name]: e.target.value };
+    const updatedQuery = { ...newSearch, [e.target.name]: e.target.value };
     setNewSearch(updatedQuery);
   }
 
@@ -25,13 +27,14 @@ export default function SearchAPIBar({ setResults }) {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Enter a location (City, State, Country) to search for local restaurants in your area"
+          placeholder="Enter a location (City, State, Country)"
           value={newSearch.location}
           name="location"
           onChange={handleChange}
           required
+          className="searchbar-input"
         />
-        <input type="submit" value="Search" />
+        <button type="submit" className="searchbar-submit">Feeling Hungry!</button>
       </form>
     </div>
   );

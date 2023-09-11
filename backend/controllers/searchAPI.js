@@ -13,6 +13,7 @@ async function searchYelp(req, res) {
     method: "GET",
     url: "https://api.yelp.com/v3/businesses/search",
     params: {
+      attributes: ["hot_and_new"],
       location,
       term: "restaurants",
       sort_by: "distance",

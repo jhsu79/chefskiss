@@ -7,7 +7,7 @@ export default function Nav(props) {
   return (
     <nav className="nav">
       <Link to="/">
-        <img src={headerImage}></img>
+        <img src={headerImage} className="headerImage" alt="Header" />
       </Link>
       <div className="page-links">
         <Link className="link" to="/search">
@@ -20,4 +20,5 @@ export default function Nav(props) {
     </nav>
   );
 }
+
 //maybe create a button component to separate out the links
