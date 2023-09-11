@@ -35,3 +35,13 @@ export async function deleteRestaurant(id) {
     return err;
   }
 }
+
+//ADD AN IMPRESSION TO A SPECIFIC RESTAURANT USING THE ID. 
+export async function addImpression(input, id) {
+  try {
+    const data = await restaurantAPI.add(input, id)
+    return data; 
+  } catch(err){
+    return err; 
+  }
+}

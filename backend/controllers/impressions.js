@@ -6,6 +6,7 @@ module.exports = {
 
 async function create(req, res) {
     const restaurant = await Restaurant.findById(req.params.id)
+    console.log("i'm in the create function")
     restaurant.impression = req.body 
     try {
       console.log(req.body);
