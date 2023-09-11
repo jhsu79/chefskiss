@@ -18,9 +18,9 @@ export default function RestaurantList({ restaurants }) {
 
   async function handleAdd(e){
     e.preventDefault()
-    await addImpression(newInput, e.target.hidden.value)
+    await addImpression(newInput, e.target.hidden.value).then(navigate(0))
      }
-
+gi
 
   async function handleDelete(id) {
     try {
