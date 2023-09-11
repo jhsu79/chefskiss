@@ -11,7 +11,6 @@ export default function Restaurants(props) {
     if (restaurantResponse.length) {
       setRestaurant(restaurantResponse);
     } else {
-      console.log(restaurantResponse);
     }
   }
 
@@ -25,5 +24,3 @@ export default function Restaurants(props) {
     </div>
   );
 }
-
-//add loading state with a spinner

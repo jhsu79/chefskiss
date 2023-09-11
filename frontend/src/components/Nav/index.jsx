@@ -20,5 +20,3 @@ export default function Nav(props) {
     </nav>
   );
 }
-
-//maybe create a button component to separate out the links

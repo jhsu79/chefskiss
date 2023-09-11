@@ -1,6 +1,10 @@
-import Nav from '../Nav'
-import './Header.css'
+import Nav from "../Nav";
+import "./Header.css";
 
-export default function (){
-    return (<div className='header'><Nav/></div>)
-} 
+export default function () {
+  return (
+    <div className="header">
+      <Nav />
+    </div>
+  );
+}
