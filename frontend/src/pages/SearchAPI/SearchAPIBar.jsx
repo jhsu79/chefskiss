@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { getSearchResultsList } from "../../utilities/SearchAPI/search-service";
-import "./SearchAPIBar.css"; // Import your CSS file
+import "./SearchAPIBar.css";
 
 const initState = {
   location: "",

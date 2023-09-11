@@ -22,10 +22,15 @@ export default function RestaurantList({ restaurants }) {
           <div className="restaurant-card" key={restaurantDetail._id}>
             <h3>{restaurantDetail.name}</h3>
             <p>
-              <strong>Phone:<br></br></strong> {restaurantDetail.display_phone}
+              <strong>
+                Phone:<br></br>
+              </strong>{" "}
+              {restaurantDetail.display_phone}
             </p>
             <p>
-              <strong>Address:<br></br></strong>{" "}
+              <strong>
+                Address:<br></br>
+              </strong>{" "}
               {restaurantDetail.display_address0 + "."}
               <br />
               {" " + restaurantDetail.display_address1}

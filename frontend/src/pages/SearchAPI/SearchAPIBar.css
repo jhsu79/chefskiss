@@ -1,7 +1,6 @@
 .searchbar {
     display: flex;
-    justify-content: left;
-    margin-top: 10%;
+    justify-content: center;
     padding: 20px;
     border-radius: 8px;
   }
