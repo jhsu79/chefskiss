@@ -27,19 +27,15 @@
 }
 
 .search-card a {
-    position: relative;
-    display: inline-block;
-    margin: 15px 0;
-    color: red;
-    text-decoration: none;
-    font-size: 1em;
+  position: relative;
+  display: inline-block;
+  margin: 15px 0;
+  color: red;
+  text-decoration: none;
+  font-size: 1em;
 }
 
-.search-card a:hover {
-  text-decoration: underline;
-}
-
-.search-card button {
+.save-button {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -47,13 +43,15 @@
   color: white;
   font-size: 1em;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.search-card button:hover {
+.save-button:hover {
   background-color: #ca2323;
+  transform: scale(1.05);
 }
 
-.search-card button:active {
+.save-button:active {
   background-color: #ca2323;
+  transform: scale(0.95);
 }

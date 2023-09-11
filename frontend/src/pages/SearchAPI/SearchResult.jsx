@@ -64,7 +64,7 @@ export default function SearchResult({ searchResult, idx }) {
         <strong>Yelp Reviews</strong>
       </a>
       <br/>
-      <button className="button" onClick={saveRestaurant}>Save Restaurant</button>
+      <button className="save-button" onClick={saveRestaurant}>Save Restaurant</button>
     </div>
   </div>
 );
