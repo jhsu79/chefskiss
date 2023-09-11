@@ -44,8 +44,7 @@ export default function RestaurantList({ restaurants }) {
             <a
               className="review"
               href={restaurantDetail.url}
-              style={{ textDecoration: "none", color: "red" }}
-            >
+              style={{ textDecoration: "none" }}>
               <strong>Yelp Reviews</strong>
             </a>
             <br />
