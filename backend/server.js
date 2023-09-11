@@ -6,6 +6,7 @@ const logger = require("morgan");
 
 const indexRouter = require("./routes/index");
 const restaurantsRouter = require("./routes/restaurants");
+const impressionsRouter = require("./routes/impressions")
 const searchAPIRouter = require("./routes/searchAPI");
 
 const app = express()
@@ -17,6 +18,7 @@ app.use(logger("dev"));
 
 app.use("/", indexRouter);
 app.use("/restaurants", restaurantsRouter);
+app.use("/", impressionsRouter)
 app.use("/search", searchAPIRouter);
 
 app.get("/", (req, res) => {

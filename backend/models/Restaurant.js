@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const impressionSchema = new Schema(
   {
-    impression: { type: String, required: true },
+    impression: { type: String },
   },
   {timestamps: true }
 )
