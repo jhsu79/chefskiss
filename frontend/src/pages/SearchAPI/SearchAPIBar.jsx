@@ -34,10 +34,10 @@ export default function SearchAPIBar({ setResults }) {
           required
           className="searchbar-input"
         />
-        <button type="submit" className="searchbar-submit">Feeling Hungry!</button>
+        <button type="submit" className="searchbar-submit">
+          Feeling Hungry!
+        </button>
       </form>
     </div>
   );
 }
-
-//Add a loading state and add spinner
