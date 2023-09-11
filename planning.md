@@ -14,9 +14,6 @@ Wireframes
 ![image](https://github.com/jhsu79/chefskiss/assets/137417888/0e1a7b97-b4bd-4013-b799-3d2cf3af7ce5)
 ![image](https://github.com/jhsu79/chefskiss/assets/137417888/3ca4a775-1ed0-4d26-bd0d-af7707a21acb)
 
-Component Tree 
-Made using Reactree
-![image](frontend/src/assets/image.png)
 
 Link to API: https://rapidapi.com/ptwebsolution/api/worldwide-restaurants/
 *This API was ultimately discard because of the lack of documentation. We decided on Yelp API Fusion instead. 
