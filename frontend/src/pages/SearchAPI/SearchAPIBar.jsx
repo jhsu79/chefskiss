@@ -32,14 +32,9 @@ export default function SearchAPIBar({ setResults }) {
           name="location"
           onChange={handleChange}
           required
-          className="searchbar-input" // New class name for the input
+          className="searchbar-input"
         />
-        <button
-          type="submit"
-          className="searchbar-submit" // New class name for the submit button
-        >
-          Search
-        </button>
+        <button type="submit" className="searchbar-submit">Feeling Hungry!</button>
       </form>
     </div>
   );
