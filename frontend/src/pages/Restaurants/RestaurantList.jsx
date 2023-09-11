@@ -16,7 +16,7 @@ export default function RestaurantList({ restaurants }) {
 
   return (
     <section>
-      <h1 className="Rest-list-head">Restaurant List</h1>
+      <h1 className="Rest-list-head">Your Restaurants</h1>
       <div className="restaurant-list">
         {restaurants.map((restaurantDetail, idx) => (
           <div className="restaurant-card" key={restaurantDetail._id}>
@@ -44,8 +44,7 @@ export default function RestaurantList({ restaurants }) {
             <a
               className="review"
               href={restaurantDetail.url}
-              style={{ textDecoration: "none", color: "red" }}
-            >
+              style={{ textDecoration: "none" }}>
               <strong>Yelp Reviews</strong>
             </a>
             <br />
