@@ -20,7 +20,7 @@ export default function RestaurantList({ restaurants }) {
     e.preventDefault()
     await addImpression(newInput, e.target.hidden.value).then(navigate(0))
      }
-gi
+
 
   async function handleDelete(id) {
     try {
