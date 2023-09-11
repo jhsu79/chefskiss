@@ -11,7 +11,7 @@ James Redden [GitHub](https://github.com/jaredden1) | [LinkedIn](https://www.lin
 ##Getting Started:
 ###How Do I Use Chef's Kiss? 
 1. Click on this link to acces the app: [A Chef's Kiss](https://thechefskiss.netlify.app/)
-2. Enter a location you'd like to explore.    
+2. Enter a location (neighborhood, city, state, country) you'd like to explore.    
 3. Click Search. This will populate list of 5 restaurants based on your search criteria. 
 4. Select a restaurant you'd like to save to 'Your Restaurants'. 
 5. On the home page, you can view all the details about the restaurants you've saved. 
@@ -25,14 +25,17 @@ James Redden [GitHub](https://github.com/jaredden1) | [LinkedIn](https://www.lin
 5. Yelp Fusion API 
 
 ##Acknowledgements:
-1. [Inspiration for Design](https://www.figma.com/community/file/1224381031537447660)
-2. [Deployment Support Article](https://dev.to/stlnick/how-to-deploy-a-full-stack-mern-app-with-heroku-netlify-ncb?utm_source=dormosheio&utm_campaign=dormosheio)
+1. [Inspiration/template for visual design](https://www.figma.com/community/file/1224381031537447660)
+2. [Deployment support article by](https://dev.to/stlnick/how-to-deploy-a-full-stack-mern-app-with-heroku-netlify-ncb?utm_source=dormosheio&utm_campaign=dormosheio)
+3. [Design for component tree by Reactree](https://marketplace.visualstudio.com/publishers/ReacTreeDev)
 
 
 ##Future Features: 
-1. Add a Show Page and implement an 'Impressions' feature to help a user save their journal restaurant.  
-2. Restrict a user from saving restaurants in their list more than once. 
-2. Implement Auth0 Authorization. 
-3. Implement a Restaurant view that allows users to view all other users' impressions. 
-4. Implement the use of an OpenAI API that summmarizes users' impressions.  
-5. Cloudinary support that allows users to upload images of the food or experience. 
+
+1. Separate frontend pages into further React Components (i.e. 'Restaurant Lists, Buttons, and Inputs')
+2. Add a Show Page and implement a feature to allow users to add their impressions of a restaurant.  
+3. Restrict a user from saving restaurants in their list more than once. 
+4. Implement Auth0 Authorization. 
+5. Implement a Restaurant view that allows users to view all other users' impressions. 
+6. Implement the use of an OpenAI API that aggregrates and summmarizes all users' impressions.  
+7. Cloudinary support that allows users to upload images of the food or experience. 
