@@ -53,3 +53,20 @@ export async function destroy(id) {
     throw new Error("Invalid Request");
   }
 }
+
+export async function add(input, id){
+  const config = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({impression: input}),
+  };
+  const res = await fetch(`${BASE_URL}/${id}/impression`, config);
+
+  if (res.ok) {
+    return res.json();
+  } else {
+    throw new Error("Invalid Request");
+  }
+}

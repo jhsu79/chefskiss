@@ -1,28 +1,12 @@
 .review {
   text-decoration: none;
-  color: red;
+  color: #ca2323;
   position: relative;
   display: inline-block;
 }
 
-.review:hover::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  background-color: red;
-  top: 0;
-  left: 0;
-}
-
-.review:hover::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  background-color: red;
-  bottom: 0;
-  left: 0;
+.review:hover {
+  color: red;
 }
 
 .restaurant-list {
@@ -33,9 +17,10 @@
 }
 
 .restaurant-card {
+  color: #fff;
   border: 1px solid #ccc;
   padding: 20px;
-  background-color: rgb(182, 155, 120, 0.7);
+  background-color: rgba(182, 155, 120, 0.87);
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -71,3 +56,27 @@
   background-color: #ca2323;
   transform: scale(0.95);
 }
+
+.search-message {
+  font-size: 35px;
+  font-weight: bold;
+  margin: 50px;
+  padding: 50px;
+  border-radius: 8px;
+  color: #fff;
+  background-color: rgba(182, 155, 120, 0.87);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 25vh;
+}
+
+@media (max-width: 600px) {
+  .search-message {
+    font-size: 20px;
+    padding: 20px;
+    min-height: auto;
+  }
+}
+

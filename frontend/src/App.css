@@ -20,41 +20,5 @@ body {
   text-align: center;
 }
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-}
-
-.page-links {
-  display: flex;
-  gap: 15px;
-}
-
-.link {
-  color: rgb(249, 248, 248);
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: #6b6a6a;
-}
-
-.link:hover {
-  background-color: #ca2323;
-}
-
-.searchbar,
-.search-results-list,
-.restaurant-list {
-  margin: 20px;
-  color: #fff;
-}
-
-.search-card,
-.restaurant-card {
-  padding: 10px;
-  margin: 10px;
-}
-
 
   
