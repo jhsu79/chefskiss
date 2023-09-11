@@ -9,6 +9,14 @@
     padding: 0; 
 }
 
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        height: auto;
+        padding: 1em;
+    }
+}
+
 .page-links{
     display: flex; 
     flex-direction: row;
