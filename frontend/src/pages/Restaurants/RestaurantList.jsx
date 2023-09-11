@@ -79,4 +79,3 @@ export default function RestaurantList({ restaurants }) {
   );
 }
 
-//Create a component for all RestaurantDetail and refactor props

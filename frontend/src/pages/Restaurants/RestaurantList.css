@@ -17,6 +17,7 @@
 }
 
 .restaurant-card {
+  color: #fff;
   border: 1px solid #ccc;
   padding: 20px;
   background-color: rgba(182, 155, 120, 0.87);
@@ -59,41 +60,23 @@
 .search-message {
   font-size: 35px;
   font-weight: bold;
-  margin: 0;
+  margin: 50px;
   padding: 50px;
   border-radius: 8px;
   color: #fff;
   background-color: rgba(182, 155, 120, 0.87);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 25vh;
 }
 
 @media (max-width: 600px) {
-  .restaurant-list {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20px;
-    padding: 10px;
-  }
-
-  .restaurant-card {
-    padding: 10px;
-  }
-
-  .Rest-list-head {
-    font-size: 30px;
-    margin-bottom: 30px;
-  }
-
-  .button {
-    padding: 5px 10px;
-    font-size: 14px;
-  }
-
   .search-message {
     font-size: 20px;
     padding: 20px;
+    min-height: auto;
   }
 }
 
