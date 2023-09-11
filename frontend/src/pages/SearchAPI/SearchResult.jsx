@@ -1,3 +1,4 @@
+import "./SearchResult.css";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { createRestaurant } from "../../utilities/restaurant/restaurant-service";
@@ -36,28 +37,38 @@ export default function SearchResult({ searchResult, idx }) {
   }
 
   return (
-    <div className="search-card" key={`searchResults-${idx}`}>
+  <div className="search-results-container">
+    <div className="restaurant-card search-card" key={`searchResults-${idx}`}>
       <h3>Name: {searchResult.name}</h3>
       <p>
-        {" "}
-        Categories:{" "}
-        {searchResult.categories.map((category) => {
-          return <>{" " + category.title + ","}</>;
-        })}
+        <strong>Categories:<br /></strong>{" "}
+        {searchResult.categories.map((category, idx) => (
+          <span key={idx}>
+            {" "}
+            {category.title}
+            {idx < searchResult.categories.length - 1 ? "," : ""}{" "}
+          </span>
+        ))}
       </p>
-      <p> Phone: {searchResult.display_phone}</p>
       <p>
-        {" "}
-        Address: {searchResult.location.display_address[0] + "."}
+        <strong>Phone:<br /></strong> {searchResult.display_phone}
+      </p>
+      <p>
+        <strong>Address:<br /></strong>
+        {searchResult.location.display_address[0] + "."}
         {" " + searchResult.location.display_address[1]}
       </p>
-      <p> Rating: {searchResult.rating}</p>
-      <p> Price: {searchResult.price}</p>
-
-      <a href={searchResult.url}> See the Yelp Reviews </a>
-      <button onClick={saveRestaurant}>Save this Restaurant</button>
+      <p><strong>Rating:</strong> {searchResult.rating} ⭐️ </p>
+      <p><strong>Price:</strong> {searchResult.price}</p>
+      <a className="review" href={searchResult.url} target="_blank" rel="noopener noreferrer">
+        <strong>Yelp Reviews</strong>
+      </a>
+      <br/>
+      <button className="save-button" onClick={saveRestaurant}>Save Restaurant</button>
     </div>
-  );
+  </div>
+);
+  
 }
 
 //Refactor to drier code
