@@ -15,9 +15,8 @@ Wireframes
 ![image](https://github.com/jhsu79/chefskiss/assets/137417888/3ca4a775-1ed0-4d26-bd0d-af7707a21acb)
 
 
-
 Link to API: https://rapidapi.com/ptwebsolution/api/worldwide-restaurants/
-
+*This API was ultimately discard because of the lack of documentation. We decided on Yelp API Fusion instead. 
 
 Primary Model / Schema - Post
 
