@@ -8,8 +8,9 @@ export default function About() {
       <p>We present you with an intuitive, user-friendly platform crafted meticulously by:</p>
       
       <ul className="developers-list">
-        <div>Joshua Hsu</div>
-        <div>James Redden</div>
+        <a href="https://www.linkedin.com/in/joshuanhsu" className="linkin">Joshua Hsu | LinkedIn</a>
+        <br/>
+        <a href="https://www.linkedin.com/in/jamesredden1" className="linkin">James Redden | LinkedIn</a>
       </ul>
 
       <p>
@@ -21,7 +22,8 @@ export default function About() {
       <p>
         Our app is a web-based solution that enables you to search for restaurants in your desired location and preserve a list of your favorite dining spots. Experience a seamless journey to discovering and organizing your next great meals.
         <br />
-        <a href="YOUR_GITHUB_REPO_LINK_HERE" className="github-link">Check out the Github Repo here!</a>
+        <br />
+        <a href="https://github.com/jhsu79/chefskiss" className="github-link"><strong>Check out the Github Repo here!</strong></a>
       </p>
 
       <h3 className="about-subheader">Technological Stack</h3>
