@@ -17,55 +17,64 @@ export default function RestaurantList({ restaurants }) {
   return (
     <section>
       <h1 className="Rest-list-head">Your Restaurants</h1>
-      <div className="restaurant-list">
-        {restaurants.map((restaurantDetail, idx) => (
-          <div className="restaurant-card" key={restaurantDetail._id}>
-            <h3>{restaurantDetail.name}</h3>
-            <p>
-              <strong>
-                Phone:<br></br>
-              </strong>{" "}
-              {restaurantDetail.display_phone}
-            </p>
-            <p>
-              <strong>
-                Address:<br></br>
-              </strong>{" "}
-              {restaurantDetail.display_address0 + "."}
-              <br />
-              {" " + restaurantDetail.display_address1}
-            </p>
-            <p>
-              <strong>Your Impressions:</strong>{" "}
-                <div className='your-impressions'>{restaurantDetail.impression ? restaurantDetail.impression.impression : <button className='delete button'>Add Impression</button>}
-                
+      {restaurants.length === 0 ? (
+        <p className="search-message">Search to add and save your favorite restaurants here!</p>
+      ) : (
+        <div className="restaurant-list">
+          {restaurants.map((restaurantDetail, idx) => (
+            <div className="restaurant-card" key={restaurantDetail._id}>
+              <h3>{restaurantDetail.name}</h3>
+              <p>
+                <strong>
+                  Phone:<br />
+                </strong>{" "}
+                {restaurantDetail.display_phone}
+              </p>
+              <p>
+                <strong>
+                  Address:<br />
+                </strong>{" "}
+                {restaurantDetail.display_address0 + "."}
+                <br />
+                {" " + restaurantDetail.display_address1}
+              </p>
+              <p>
+                <strong>Your Impressions:</strong>{" "}
+                <div className="your-impressions">
+                <br />
+                  {restaurantDetail.impression 
+                    ? restaurantDetail.impression.impression 
+                    : <button className="delete button">Add Impression</button>
+                  }
                 </div>
-            </p>
-            <p>
-              <strong>Rating:</strong> {restaurantDetail.rating} ⭐️
-            </p>
-            <p>
-              <strong>Price:</strong> {restaurantDetail.price}
-            </p>
-            <a
-              className="review"
-              href={restaurantDetail.url}
-              style={{ textDecoration: "none" }}>
-              <strong>Yelp Reviews</strong>
-            </a>
-            <br />
-            <br />
-            <button
-              className="delete button"
-              onClick={() => {
-                handleDelete(restaurantDetail._id);
-              }}
-            >
-              Remove Restaurant
-            </button>
-          </div>
-        ))}
-      </div>
+              </p>
+              <p>
+                <strong>Rating:</strong> {restaurantDetail.rating} ⭐️
+              </p>
+              <p>
+                <strong>Price:</strong> {restaurantDetail.price}
+              </p>
+              <a
+                className="review"
+                href={restaurantDetail.url}
+                style={{ textDecoration: "none" }}
+              >
+                <strong>Yelp Reviews</strong>
+              </a>
+              <br />
+              <br />
+              <button
+                className="delete button"
+                onClick={() => {
+                  handleDelete(restaurantDetail._id);
+                }}
+              >
+                Remove Restaurant
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
     </section>
   );
 }
