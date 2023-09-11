@@ -34,7 +34,11 @@ export default function RestaurantList({ restaurants }) {
   return (
     <section>
       <h1 className="Rest-list-head">Your Restaurants</h1>
-      <div className="restaurant-list">
+
+     {restaurants.length === 0 ? (
+        <p className="search-message">Search to add and save your favorite restaurants here!</p>
+      ) : (
+    <div className="restaurant-list">
         {restaurants.map((restaurantDetail) => (
           <div className="restaurant-card" key={restaurantDetail._id}>
             <h3>{restaurantDetail.name}</h3>
@@ -59,34 +63,35 @@ export default function RestaurantList({ restaurants }) {
                 <input name="impression" onChange={handleChange}  type="text" placeholder="Enter your impressions" required/> 
                 <input type="hidden" name="hidden" value={restaurantDetail._id}/></form>}           
                 </div>
-            </p>
-            <p>
-              <strong>Rating:</strong> {restaurantDetail.rating} ⭐️
-            </p>
-            <p>
-              <strong>Price:</strong> {restaurantDetail.price}
-            </p>
-            <a
-              className="review"
-              href={restaurantDetail.url}
-              style={{ textDecoration: "none" }}>
-              <strong>Yelp Reviews</strong>
-            </a>
-            <br />
-            <br />
-            <button
-              className="delete button"
-              onClick={() => {
-                handleDelete(restaurantDetail._id);
-              }}
-            >
-              Remove Restaurant
-            </button>
-          </div>
-        ))}
-      </div>
+              </p>
+              <p>
+                <strong>Rating:</strong> {restaurantDetail.rating} ⭐️
+              </p>
+              <p>
+                <strong>Price:</strong> {restaurantDetail.price}
+              </p>
+              <a
+                className="review"
+                href={restaurantDetail.url}
+                style={{ textDecoration: "none" }}
+              >
+                <strong>Yelp Reviews</strong>
+              </a>
+              <br />
+              <br />
+              <button
+                className="delete button"
+                onClick={() => {
+                  handleDelete(restaurantDetail._id);
+                }}
+              >
+                Remove Restaurant
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
     </section>
   );
 }
 
-//Create a component for all RestaurantDetail and refactor props
