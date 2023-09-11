@@ -36,6 +36,12 @@ export default function RestaurantList({ restaurants }) {
               {" " + restaurantDetail.display_address1}
             </p>
             <p>
+              <strong>Your Impressions:</strong>{" "}
+                <div className='your-impressions'>{restaurantDetail.impression ? restaurantDetail.impression.impression : <button className='delete button'>Add Impression</button>}
+                
+                </div>
+            </p>
+            <p>
               <strong>Rating:</strong> {restaurantDetail.rating} ⭐️
             </p>
             <p>
