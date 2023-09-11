@@ -20,6 +20,8 @@ James Redden [GitHub](https://github.com/jaredden1) | [LinkedIn](https://www.lin
 
 5. On the home page, you can view all the details about the restaurants you've saved. 
 
+6. On each restaurant, you can also add your own impressions. 
+
 ## Technologies Used:
     
 1. Mongo DB 
