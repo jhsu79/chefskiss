@@ -12,15 +12,20 @@ James Redden [GitHub](https://github.com/jaredden1) | [LinkedIn](https://www.lin
 ### How Do I Use Chef's Kiss? 
 1. Click on this link to access the app: [A Chef's Kiss](https://thechefskiss.netlify.app/)
 
-2. Enter a location (neighborhood, city, state, country) you'd like to explore.    
+2. On the search page, enter a location (neighborhood, city, state, country) you'd like to explore.    
+![image](https://github.com/jhsu79/chefskiss/assets/137417888/5bb2e8b3-c045-4498-a032-91f4681f37d9)
 
 3. Click Search. This will populate list of 5 restaurants based on your search criteria. 
+<img width="1479" alt="Screenshot 2023-09-11 at 10 23 17 PM" src="https://github.com/jhsu79/chefskiss/assets/137417888/0cfad567-0df0-4df5-975c-0ae78ccb6ce8">
 
 4. Select a restaurant you'd like to save to 'Your Restaurants'. 
 
 5. On the home page, you can view all the details about the restaurants you've saved. 
+<img width="1479" alt="Screenshot 2023-09-11 at 10 23 17 PM" src="https://github.com/jhsu79/chefskiss/assets/137417888/0cfad567-0df0-4df5-975c-0ae78ccb6ce8">
 
 6. On each restaurant, you can also add your own impressions. 
+<img width="1496" alt="Screenshot 2023-09-11 at 10 21 33 PM" src="https://github.com/jhsu79/chefskiss/assets/137417888/0360fc8e-7f17-4fee-99c1-d07726377946">
+
 
 ## Technologies Used:
     
