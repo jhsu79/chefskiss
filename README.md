@@ -23,7 +23,7 @@ James Redden [GitHub](https://github.com/jaredden1) | [LinkedIn](https://www.lin
 5. On the home page, you can view all the details about the restaurants you've saved. 
 <img width="1479" alt="Screenshot 2023-09-11 at 10 23 17 PM" src="https://github.com/jhsu79/chefskiss/assets/137417888/0cfad567-0df0-4df5-975c-0ae78ccb6ce8">
 
-6. On each restaurant, you can also add your own impressions. 
+6. On each restaurant, you can also add your own impressions or remove the restaurant from your list.
 <img width="1496" alt="Screenshot 2023-09-11 at 10 21 33 PM" src="https://github.com/jhsu79/chefskiss/assets/137417888/0360fc8e-7f17-4fee-99c1-d07726377946">
 
 
