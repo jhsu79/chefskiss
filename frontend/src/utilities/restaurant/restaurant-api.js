@@ -54,13 +54,13 @@ export async function destroy(id) {
   }
 }
 
-export async function add(input, id){
+export async function add(input, id) {
   const config = {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({impression: input}),
+    body: JSON.stringify({ impression: input }),
   };
   const res = await fetch(`${BASE_URL}/${id}/impression`, config);
 

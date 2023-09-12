@@ -1,7 +1,7 @@
 @font-face {
-    font-family: 'Yellowtail';
-    src: url('../src/assets/Yellowtail-Regular.otf') format('opentype');
-  }
+  font-family: "Yellowtail";
+  src: url("../src/assets/Yellowtail-Regular.otf") format("opentype");
+}
 
 body {
   margin: 0;
@@ -19,6 +19,3 @@ body {
 .App {
   text-align: center;
 }
-
-
-  

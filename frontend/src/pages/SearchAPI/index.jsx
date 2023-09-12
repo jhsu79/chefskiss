@@ -12,5 +12,3 @@ export default function Search() {
     </div>
   );
 }
-
-//Set a loading state and add spinner

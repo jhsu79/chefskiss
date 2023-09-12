@@ -1,4 +1,5 @@
 import * as restaurantAPI from "./restaurant-api";
+
 //RETURN A LIST OF RESTAURANTS IN THE DB
 export async function getRestaurant() {
   try {
@@ -35,7 +36,6 @@ export async function deleteRestaurant(id) {
     return err;
   }
 }
-
 //ADD AN IMPRESSION TO A SPECIFIC RESTAURANT USING THE ID. 
 export async function addImpression(input, id) {
   try {

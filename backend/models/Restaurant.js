@@ -3,10 +3,10 @@ const Schema = mongoose.Schema;
 
 const impressionSchema = new Schema(
   {
-    impression: {type: String},
+    impression: { type: String },
   },
-  {timestamps: true }
-)
+  { timestamps: true }
+);
 
 const restaurantSchema = new Schema(
   {

@@ -10,7 +10,7 @@ James Redden [GitHub](https://github.com/jaredden1) | [LinkedIn](https://www.lin
 ## Getting Started:
 
 ### How Do I Use Chef's Kiss? 
-1. Click on this link to acces the app: [A Chef's Kiss](https://thechefskiss.netlify.app/)
+1. Click on this link to access the app: [A Chef's Kiss](https://thechefskiss.netlify.app/)
 
 2. Enter a location (neighborhood, city, state, country) you'd like to explore.    
 
@@ -44,5 +44,5 @@ James Redden [GitHub](https://github.com/jaredden1) | [LinkedIn](https://www.lin
 4. Restrict a user from saving restaurants in their list more than once. 
 5. Implement Auth0 Authorization. 
 6. Implement a Restaurant view that allows users to view all other users' impressions. 
-7. Implement the use of an OpenAI API that aggregrates and summmarizes all users' impressions.  
+7. Implement the use of an OpenAI API that aggregates and summarizes all users' impressions.  
 8. Cloudinary support that allows users to upload images of the food or experience. 
