@@ -37,8 +37,9 @@ James Redden [GitHub](https://github.com/jaredden1) | [LinkedIn](https://www.lin
 
 ## Acknowledgements:
 1. [Inspiration/template for visual design](https://www.figma.com/community/file/1224381031537447660)
-2. [Deployment support article by](https://dev.to/stlnick/how-to-deploy-a-full-stack-mern-app-with-heroku-netlify-ncb?utm_source=dormosheio&utm_campaign=dormosheio)
+2. [Deployment support article](https://dev.to/stlnick/how-to-deploy-a-full-stack-mern-app-with-heroku-netlify-ncb?utm_source=dormosheio&utm_campaign=dormosheio)
 3. [Design for component tree by Reactree](https://marketplace.visualstudio.com/publishers/ReacTreeDev)
+4. Thank you, Lily Smith and Federico Rossi, for the impressions support! 
 
 
 ## Future Features: 
